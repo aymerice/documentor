@@ -1,22 +1,81 @@
-.. documentor documentation master file, created by
-   sphinx-quickstart on Fri Jun 17 15:15:17 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 OpenSwitch Schema Documentation
 ===============================
 
-Contents:
+Tables:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   test
-
-
-.. Indices and tables
-.. ==================
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+   system
+   subsystem
+   bridge
+   vrf
+   mstp_instance
+   mstp_instance_port
+   mstp_common_instance
+   mstp_common_instance_port
+   daemon
+   route_map
+   route_map_entry
+   bgp_aspath_filter
+   prefix_list
+   prefix_list_entry
+   bgp_community_filter
+   route
+   nexthop
+   bgp_router
+   bgp_neighbor
+   recursive_nexthop
+   bgp_route
+   bgp_nexthop
+   neighbor
+   vlan
+   port
+   interface
+   mclag
+   mclag_remote_interface
+   fan
+   led
+   temp_sensor
+   power_supply
+   manager
+   ssl
+   radius_server
+   cli_alias
+   bufmon
+   dhcp_server
+   dhcpsrv_range
+   dhcpsrv_static_host
+   dhcpsrv_option
+   dhcpsrv_match
+   logical_switch
+   mac
+   sflow
+   qos_dscp_map_entry
+   qos_cos_map_entry
+   q_profile
+   q_profile_entry
+   qos
+   queue
+   ntp_association
+   ntp_key
+   ospf_router
+   ospf_area
+   ospf_summary_address
+   ospf_interface
+   ospf_neighbor
+   ospf_nbma_neighbor
+   ospf_vlink
+   ospf_route
+   ospf_lsa
+   dhcp_relay
+   mirror
+   udp_bcast_forwarder_server
+   package_info
+   syslog_remote
+   snmp_trap
+   snmpv3_user
+   acl
+   acl_entry
+   notification_subscriber
+   notification_subscription

@@ -1,5 +1,19 @@
 #!/usr/bin/env python
 
+# Copyright (C) 2016 Hewlett Packard Enterprise Development LP
+#
+#  Licensed under the Apache License, Version 2.0 (the "License"); you may
+#  not use this file except in compliance with the License. You may obtain
+#  a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#  License for the specific language governing permissions and limitations
+#  under the License.
+
 import almost_base64
 import copy
 import json
@@ -326,14 +340,14 @@ class Diagram:
             ret += 'package "Root Tables" {\n'
             for table in self.root_tables:
                 ret += '    ' + str(table)
-            ret += '}\n\n'
+            ret += '}\n'
         for table in self.tables:
             ret += str(table)
-        ret += '\n'
+        #ret += '\n'
         for ta, tb in self.links:
             ret += ta + ' --> ' + tb + '\n'
-        ret += '\n'
-        ret += '@enduml\n'
+        #ret += '\n'
+        ret += '@enduml'
         return ret
 
     def get_link(self):
@@ -361,7 +375,7 @@ def main():
     save_tables(doc)
 
     # diag = Diagram(schema)
-    # cdiag = diag.center_on('ACL')
+    # cdiag = diag.focus_on('Bridge')
     # print cdiag
     # img = almost_base64.deflate_and_encode(str(cdiag))
     # print 'http://www.plantuml.com/plantuml/img/' + img

@@ -49,7 +49,7 @@ def _append3bytes(bb1, bb2, bb3):
                          _encode6bit(c3 & 0x3F), _encode6bit(c4 & 0x3F))
 
 
-def encode(data) :
+def encode(data):
     '''Reencode data to ASCII using a transformation close to base64.
 
     Code adapted from http://plantuml.com/codejavascript2.html

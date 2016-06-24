@@ -1,5 +1,7 @@
 # OSPF_Summary_Address
 
+![OSPF_Summary_Address_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3oxDpKqigentJ4afIWKAsjWeQ8Jev6IcPvIa5wMcvcagsDaXgtSiIat4heWB8Q-hQuVLT2ukXzIy590B)
+
 ## 1. Configuration group
 
 ### 1.1 prefix column

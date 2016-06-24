@@ -1,5 +1,7 @@
 # BGP_Router
 
+![BGP_Router_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd1o3uWFoYyjIIrIiB5Hq0ZHoSbCpoX9BqfDpTDKiBFZuk9oICrB0Qa7)
+
 ## 1. Configuration group
 
 BGP_router includes all bgp config related information. The entries are created

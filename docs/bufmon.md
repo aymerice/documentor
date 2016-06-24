@@ -1,5 +1,7 @@
 # bufmon
 
+![bufmon_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQJIjDpyF0KR6mMD49sSpFICalIYrDGyJGKxEwvQBY1mICrB0Ha5)
+
 Configuration and status of the counters per Capacity Monitoring feature
 
 ## 1. Status group

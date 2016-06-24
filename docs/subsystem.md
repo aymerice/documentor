@@ -1,5 +1,7 @@
 # Subsystem
 
+![Subsystem_table_img](http://www.plantuml.com/plantuml/img/VP512u9048Nlyoi6JmNv3qGyL11qYFGkgqqMhRlBpaf8zDzJ2fKbTcxptiVm7fEn4zPrhGGZweTe2AEprWuBKKdY25-0mzHIC6FUiwCMamHNnKRUcvjhB95QOvh26-07THK7k2zqt6r3zbwea7rGZknLr1I22cfDoQHOsn1sqa-o9NV6oFu_1tEZE4x7R9uonV7qvMdF6lf3Fg-JwM6B3W0PgSlufmy0)
+
 ## 1. Inventory Info group
 
 ### 1.1 other_info : diag_version key

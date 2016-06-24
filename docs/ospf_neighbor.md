@@ -1,5 +1,7 @@
 # OSPF_Neighbor
 
+![OSPF_Neighbor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2BzqlDJCz8oYzIiB5Hq0ZHoG7oIjABKbFpD1Nix50KElaw4g_QCwyajIWjCJaLkqekD4MwkdQepk52THn27jaLN5mEgNaf80y1)
+
 ## 1. status group
 
 ### 1.1 status : last_up_timestamp key

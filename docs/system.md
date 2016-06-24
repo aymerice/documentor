@@ -1,5 +1,7 @@
 # System
 
+![System_table_img](http://www.plantuml.com/plantuml/img/ZLF1JiCm3BtdAwATG69_C5M3ZfsO6Ct4DV9M4ohIP4fIq8JuTmBj9ATYARdPVdb-UNQMFe0BNQlP4Gvle93FAci3ty5Uev_nJyRZEMZmdZ_9hRClZKQ-MF2htOrkr6jG3j5SywAWG2kc8EBa0xPJAB_MzkDlq1TZ0rEtznco7dJdcbfTqDqZLe2jDJb4V9LSYN8hDt2KzoQuKmuT7wYjabLa3Td6j-L3baTaonimSMXkIdVvAFud-xbQvyeLr4tdfK3tVgaf6qOxdnU3xJJJsqmpKHuDenqqZ7fe-BiGD17jeU5WHy9_tjfHqz4i4r8wk_6rn4fQJBn9wCuRojWIJVtpsRu1)
+
 Configuration for an OpenSwitch system. There must be exactly one record in the
 [System](system.html) table.
 

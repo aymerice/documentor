@@ -1,5 +1,7 @@
 # Manager
 
+![Manager_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEwvQBYw88j_4FA0fHTXLSK6DqDMrWodaud98pKi1EG00)
+
 Configuration for a database connection to an OpenSwitch database (OVSDB)
 client.
 

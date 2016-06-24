@@ -1,5 +1,7 @@
 # Syslog_Remote
 
+![Syslog_Remote_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEwvQBYwuefpyzFYWrDpyabJiQhcW1kdgsg4gv-9oICrB0Ja6)
+
 Each entry contains the configuration of the remote syslog server to forward
 syslog messages.
 

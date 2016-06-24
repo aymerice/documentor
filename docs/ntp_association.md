@@ -1,5 +1,7 @@
 # NTP_Association
 
+![NTP_Association_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1R-GW7Zlr4e56ni5ZH2TdCpqZ9BqejJKF4q5EpiqPOx5nVd9cOabcVbvs9NNSd51L8S5kM5NmOLkZgwk7Sm9MEM09d5nEQJcfO1y0m00)
+
 NTP Client Configuration info related to configured NTP servers and their status
 info.`https://www.ietf.org/rfc/rfc5907.txt`
 

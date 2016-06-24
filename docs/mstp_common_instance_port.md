@@ -1,5 +1,7 @@
 # MSTP_Common_Instance_Port
 
+![MSTP_Common_Instance_Port_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0D3Wc8TyxFpStFY_VC0qhc9QV61-GNbIZOs2XeXEZaPAPdbAGNfQRcQIhOsU7HX4yzRlEuSDklgsi7reXL2LWMfrukBeVKl1IG9m40)
+
 This represents information regarding a specific Port within the Bridge's Bridge
 Protocol entity, for the CIST.
 

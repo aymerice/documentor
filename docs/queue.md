@@ -1,5 +1,7 @@
 # Queue
 
+![Queue_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWiJIrDLR2nKT08qSd9JCyeIIzAJStJLB2pu-BYSaZDIm4f1G00)
+
 Contains scheduling parameters for one queue of one profile.
 
 ## 1. Hardware Default group

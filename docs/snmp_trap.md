@@ -1,5 +1,7 @@
 # SNMP_Trap
 
+![SNMP_Trap_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXM0_tu3uaAB40WKR6mMD49sSpFICalIYrDGyJGKxEwvQBY1mICrB0Pa6)
+
 ## 1. configuration group
 
 ### 1.1 community_name column

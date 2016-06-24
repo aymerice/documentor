@@ -1,5 +1,7 @@
 # Q_Profile_Entry
 
+![Q_Profile_Entry_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWYC3oZAJylCIOrtpIifgbImiL7G2D79oKpFA4alIatDqrImi-FYud98pKi1QG80)
+
 Contains configuration parameters for one queue of one profile.
 
 ## 1. Configuration group

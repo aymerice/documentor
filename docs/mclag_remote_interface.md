@@ -1,5 +1,7 @@
 # MCLAG_Remote_Interface
 
+![MCLAG_Remote_Interface_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1Lzd7qVt-A3KtFoIr7ZFl9BKehJ4v5G56ni5ZH2TdCpqZ9BqejJKF4q5EpkkMYukYAQ0_A8Ix4gum5AwkdOu3ERYSaZDIm4v3G00)
+
 Each entry contains the information about a physical interface on the peer
 switch which is configured for MCLAG. This information is determined by
 exchanging packets over the ISL link between the MLAG switches.

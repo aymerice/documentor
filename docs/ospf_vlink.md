@@ -1,5 +1,7 @@
 # OSPF_Vlink
 
+![OSPF_Vlink_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3yl9pCjMiB5Hq0ZHoSbCpoX9BqfDpTDKiBD3LkMPLv9Qb9QOd8fT9HUQ8brTEoJJkRWSKlDIGFO2)
+
 ## 1. Configuration group
 
 ### 1.1 area_id column

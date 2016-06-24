@@ -1,5 +1,7 @@
 # MSTP_Instance
 
+![MSTP_Instance_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0D3Wc8zym3YkObfyO7v1ULADZOA6Y4wEHafcUKf1UbfkPfAjZPGLM7-JZwuPD7CGsxGYvKDRgwTbZSW4KHo6ekBeVKl1IGum40)
+
 This represents information regarding a Bridge's Bridge Protocol entity for the
 specified Spanning Tree instance.
 

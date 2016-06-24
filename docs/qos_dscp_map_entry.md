@@ -1,5 +1,7 @@
 # QoS_DSCP_Map_Entry
 
+![QoS_DSCP_Map_Entry_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEwvQBYw8ei3yu7YNOEU0UD_4WdZNl9AYIkmQkA2cwUhQOT73nUMGcfS2SXO0)
+
 Contains DSCP map entries used by QoS Trust Mode. It associates each code point
 to local_priority (required), and (optionally), priority code point, color and
 description.

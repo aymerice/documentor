@@ -1,5 +1,7 @@
 # Bridge
 
+![Bridge_table_img](http://www.plantuml.com/plantuml/img/XP5D2eCm48NtSuhWgeLw0n6jgu8MgTAjf374qFoK9AMKqhlNe0jRWirovdkJDsyowx1nTodWXiaLCugYazOEjVWYg8tG2z3uYC3MeYelK9AWJRiJd0sE6KhL5gNf0ccUrb7vZoerumIBhdbmHuOm_GQOuBtX_MWh24t4kSoFQ_rQ6xVMhvgsxWejfLRTGOs1ABBwNyMDqIPCm9n07AUpSvWNy9L9kQnuR_2JHrZhj_oQ5N0D_aGBEMHKzVwu)
+
 Configuration for a bridge within an [System](system.html).
 
 A [Bridge](bridge.html) record represents an Ethernet switch with one or more

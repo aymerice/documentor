@@ -1,5 +1,7 @@
 # Power_supply
 
+![Power_supply_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWkJIgkB2v9pLMmiL7G2D79oKpFA4alIatDqrImiuCg2iWlJosABoujACYfnAwE2s6EhguTYWOkBeVKl1IGZG00)
+
 Information for a power supply unit (PSU).
 
 ## 1. Statistics group

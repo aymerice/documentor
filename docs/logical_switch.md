@@ -1,4 +1,6 @@
 # Logical_Switch
 
+![Logical_Switch_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1P_yzCpan9puuFBCakGC1HiR1OqGdPpCz8oIzABKr3nD1JixhbekBeXYfwBC5A1fM1LnePcagsi7LS_5vP2Qbm9o3W00)
+
 Configuration for identifying overlay networks associated with bridges.
 

@@ -1,5 +1,7 @@
 # OSPF_Route
 
+![OSPF_Route_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3yelBKbLiB5Hq0ZHoSbCpoX9BqfDpTDKiBD3LkLOb9f8K17Og2BiohYGLUZgsY7fu4BOW2R1vP2Qbm9oBm00)
+
 ## 1. status group
 
 ### 1.1 route_info : area_id key

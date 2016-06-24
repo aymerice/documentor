@@ -1,5 +1,7 @@
 # MCLAG
 
+![MCLAG_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1Lzd7qTt1HiR1OqGdPpCz8oIzABKr3nD1JixhbekBeYQi20tx2eWqW7vHINOvRaWfklgse4L8N61Hd9nEQJcfO1S2G00)
+
 ## 1. MCLAG Device configuration group
 
 ### 1.1 device_priority column

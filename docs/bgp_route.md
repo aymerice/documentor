@@ -1,5 +1,7 @@
 # BGP_Route
 
+![BGP_Route_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1IVtWFYW_DAIL0KR6mMD49sSpFICalIYrDGyJGKxEwvQBYw4Eh_KYfAC_0BiAY7AmeBSi4jp8IpIrRK3gKCJGRA0YyiXDIy5v7u0)
+
 BGP local RIB.
 
 ## 1. BGP Routes group

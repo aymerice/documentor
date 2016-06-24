@@ -1,5 +1,7 @@
 # Port
 
+![Port_table_img](http://www.plantuml.com/plantuml/img/ZLJRRe9047tVhzZur2Rr3umHCTecI2dOlcvM794KM3CijatJV-yYTaMHtVAsp9dRcJapAIL7MUKPsVFudIT01w4GagxuEeDoGBy9LL-SyRAaIzTp5dGqedUhXonDTZ91WEAUZiSjq0iBK6pJ3An04TaWnuGiX5n8O4-51Dpos1euXBZ2CZq0y-5JxiJUvl0w2zWqvgLaSu4V73U0B08y0DeyPuzkeEhB-9Ur5SUrGNnGbhNeIVf3I0EROhf9UaWuvOfMWQ9BJRQ8WGK2fGdzvZc-oLxt6E61XRmmfpMotK0SrpEM4ivDvkSecBDGLB9lC0tCiYWDoCRACaNi6qMBPLVakIZ-J_Qn1Kk1f3_oS3W-LavQYwV_TVTUcnhbwgUETLjWv3ANGHuQKqzEFwwQxAQjLuxKYkYQr5KWbnkdCLeVvxQQ8Ts8ydU4o4ajPvUkDhhkQar9UzbQ9LmHgrtEv94959lweFu2)
+
 A port within a [Bridge](bridge.html).
 
 Most commonly, a port has exactly one ``interface,'' pointed to by its

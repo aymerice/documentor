@@ -1,5 +1,7 @@
 # MSTP_Common_Instance
 
+![MSTP_Common_Instance_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd0goan9JrMmiL7G2D79oKpFA4alIatDqrImiuEg2FDnzCCdxniS4X3ld9-RcvyNxva7D3ulEJK-8B-eX5HDsDLpOLMggsi7TXWNrFqWFZQ5k7NZT3ONbqDgNWeeX000)
+
 This represents information regarding a Bridge's Bridge Protocol entity for the
 CIST..
 

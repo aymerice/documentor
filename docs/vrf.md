@@ -1,5 +1,7 @@
 # VRF
 
+![VRF_table_img](http://www.plantuml.com/plantuml/img/XL9DRy8m3BtdLqISXZJ-0Qhu4kp0K5MwNICJh58H6XIxC3JjlwzHbwrYMvDJOZy_E-zvGWoEwvCHPz17A50ECcjPvh0pI0FvBcHpj04Y-JnVJrToF9OF-QCfYmCN3h4QoYJfW3BKjQFoWcg3RtomvsY1hHbZeEsD64ynr2PFrPJ8wXAuj5KC_h98rKm3iLfQTmMtHwUsw2xeOfMBftcgCZHmYuw4JMPdeuopLKFuln8VGdGwzmtPmbwpPLywjOx_pelMvD4eyHp2y_XxfwtuxV0zsjEBUpC2gADT2BKV3wyUMmBaHwqG-LgGyFoMFGJ41AkzN_DF)
+
 Each entry in this table represents a single routing domain, commonly known as
 Virtual Routing and Forwarding.
 

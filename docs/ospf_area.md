@@ -1,5 +1,7 @@
 # OSPF_Area
 
+![OSPF_Area_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3oxDpKqigentJ4afIWKAsjWeQ8Jev6IcPvIa5wMcvcagsDaXgm_ABor99QZAiIWraQ0YpxoIrAAqn6J2nla4Es9NmuMmJLVN3irOR990ax09Wts5JG8jUBYu75BpKa112000)
+
 The configurations and other details of and OSPFv2 Area entity.
 
 ## 1. status group

@@ -1,5 +1,7 @@
 # Temp_sensor
 
+![Temp_sensor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWkJIgkB2v9pLMmiL7G2D79oKpFA4alIatDqrImiuCg2adDBOWlJiqhpY_2hemBOOokhXsoUYukXzIy591z)
+
 ## 1. Status group
 
 ### 1.1 status column

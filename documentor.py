@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
+import almost_base64
 import copy
 import json
 import re
+import zlib
 
 from collections import OrderedDict
 
@@ -13,13 +15,14 @@ class EmptyStringArray(object):
 
 
 class DocSection:
-    def __init__(self, title='', obj=None):
+    def __init__(self, title='', obj=None, link=None):
         self.title = title
         if obj and isinstance(obj, dict) and 'doc' in obj:
             self.text = obj['doc']
         else:
             self.text = []
         self.subsections = []
+        self.link = link
 
     def add(self, subsection):
         self.subsections.append(subsection)
@@ -38,6 +41,9 @@ class DocSection:
         title = ('#' * level + ' ' + self._indstr(ind) + self.title +
                  post[level] + '\n\n')
         fd.write(title)
+        #print self.title + ' = ' + str(self.link)
+        if self.link is not None:
+            fd.write('![%s_table_img](%s)\n\n' % (self.title,self.link))
         for line in self.text:
             fd.write(line + '\n')
         if len(self.text) > 0:
@@ -105,17 +111,6 @@ class DocSection:
         del ind[-1]
 
 
-def add_to_groups(groups, group):
-    paths = group.split('/')
-    # Discart first two paths
-    paths = paths[2:]
-    cur_group = groups
-    for path in paths:
-        if path not in cur_group:
-            cur_group[path] = OrderedDict()
-        cur_group = cur_group[path]
-
-
 class DocGroup:
     def __init__(self, title='', obj=None):
         self.section = DocSection(title, obj)
@@ -157,8 +152,13 @@ class DocGroup:
             doc.add(group.to_doc_section())
         return doc
 
-    def from_table(self, table_name, table, schema):
-        self.section = DocSection(table_name, table)
+    def from_table(self, table_name, table, schema, diag=None):
+        if diag is not None:
+            table_diag = diag.focus_on(table_name)
+            link = table_diag.get_link()
+            self.section = DocSection(table_name, table, link)
+        else:
+            self.section = DocSection(table_name, table)
         docgroup = self
         columns = table['columns']
         for column_name, column in columns.iteritems():
@@ -175,7 +175,8 @@ class DocGroup:
             if 'valueMap' in col_type:
                 for key_name, key in col_type['valueMap'].iteritems():
                     if 'group' in key:
-                        section = DocSection(column_name + ' : ' + key_name + ' key', key)
+                        section = DocSection(column_name + ' : ' +
+                                             key_name + ' key', key)
                         docgroup.add_to_group(key['group'], section, schema)
 
     def from_schema(self, schema, path=[]):
@@ -191,47 +192,6 @@ class DocGroup:
             group.from_schema(schema, path)
             del path[-1]
 
-
-
-# class DocGroup:
-#     def __init__(self, title='', obj=None, schema=None):
-#         self.subgroups = OrderedDict()
-#         self.subsections = []
-#         self.doc = DocSection(title, obj)
-#         self.schema = schema
-#
-#     def _add_to_subgroups(self, group, title, obj):
-#         paths = group.split('/')
-#         paths = paths[2:]
-#         cur_group = self
-#         for path in paths:
-#             if path not in cur_group.subgroups:
-#                 cur_group.subgroups[path] = DocGroup(title=path + ' group')
-#             cur_group = cur_group.subgroups[path]
-#         cur_group.subsections.append(DocSection(title, obj))
-#
-#     def add(self, title, obj):
-#         if isinstance(obj, dict) and 'group' in obj:
-#             if isinstance(obj['group'], list):
-#                 for group in obj['group']:
-#                     self._add_to_subgroups(group, title, obj)
-#             else:
-#                 self._add_to_subgroups(obj['group'], title, obj)
-#
-#     def to_doc_section(self):
-#         doc = DocSection()
-#         doc.title =  self.doc.title
-#         doc.text =  self.doc.text
-#         for section in self.subsections:
-#             doc.add(section)
-#         for group in self.subgroups.values():
-#             doc.add(group.to_doc_section())
-#         return doc
-#
-#     def from_table(self, table):
-#         columns = table['columns']
-#         for column_name, column in columns.iteritems():
-#             self.add(column_name, column)
 
 def save_tables(doc):
     docs_dir = 'docs/'
@@ -272,57 +232,146 @@ def build_doc(schema):
     return doc
 
 
-def build_grouped_doc(schema):
+def build_grouped_doc(schema, diag=None):
     doc = DocSection('OpenSwitch Schema', schema)
     tables = schema['tables']
     for table_name, table in tables.iteritems():
         group = DocGroup()
-        group.from_table(table_name, table, schema)
+        group.from_table(table_name, table, schema, diag)
         doc.add(group.to_doc_section())
     return doc
 
 
-def print_groups(groups, space=0):
-    pre = ' ' * space * 2 + unichr(746)
-    for group in groups:
-        print pre + group
-        print_groups(groups[group], space + 1)
+class TableDiagram:
+    def __init__(self, name='', table=None):
+        self.name = name
+
+    def __str__(self):
+        return "class %s << (T,lightgreen) >>\n" % self.name
+
+    def __eq__(self, other):
+        return self.name == other.name
+
+    def __hash__(self):
+        return hash(self.name)
 
 
-def get_groups(table):
-    columns = table['columns']
-    groups = OrderedDict()
-    for column_name, column in columns.iteritems():
-        col_type = column['type']
-        if isintance(col_type, dict) and 'valueMap' in col_type:
-            grouped_keys = OrderedDict()
-            for key_name, key in col_type['valueMap']:
-                if 'group' in key:
-                    if key['group'] not in grouped_key:
-                        grouped_cols[key['group']] = []
-                    grouped_cols[key['group']].append(key)
+class Diagram:
+    def __init__(self, schema=None):
+        self.root_tables = set()
+        self.tables = set()
+        self.links = set() # Tuples of table names
+        if schema is not None:
+            self.from_schema(schema)
 
-        else:
-            if 'group' in column:
-                if isinstance(column['group'], list):
-                    for group in column['group']:
-                        add_to_groups(groups, group)
-                else:
-                    add_to_groups(groups, column['group'])
-    return groups
+    def add_table(self, table):
+        self.tables.add(table)
+
+    def add_root_table(self, table):
+        self.root_tables.add(table)
+
+    def add_link(self, table_a, table_b):
+        self.links.add((table_a, table_b))
+
+    def from_schema(self, schema):
+        tables = schema['tables']
+        for table_name, table in tables.iteritems():
+            table_diag = TableDiagram(table_name)
+            if table.get('isRoot', False):
+                self.add_root_table(table_diag)
+            else:
+                self.add_table(table_diag)
+            columns = table['columns']
+            for column in columns.itervalues():
+                if isinstance(column['type'], dict) and \
+                   isinstance(column['type']['key'], dict) and \
+                   'refTable' in column['type']['key']:
+                   self.add_link(table_name, column['type']['key']['refTable'])
+
+    def from_table(self, table_name, table):
+        table_diag = TableDiagram(table_name)
+        self.add_table(table_diag)
+        columns = table['columns']
+        for column in columns.itervalues():
+            if isinstance(column['type'], dict) and \
+               isinstance(column['type']['key'], dict) and \
+               'refTable' in column['type']['key']:
+               other_table_name = column['type']['key']['refTable']
+               self.add_table(TableDiagram(other_table_name))
+               self.add_link(table_name, other_table_name)
+
+    def focus_on(self, table_name):
+        diag = Diagram()
+        valid_tables = set()
+        valid_tables.add(table_name)
+        # Copy relevant links
+        for ta, tb in self.links:
+            if ta == table_name or tb == table_name:
+                valid_tables.add(ta)
+                valid_tables.add(tb)
+                diag.links.add((ta,tb))
+        # Copy relevant root tables
+        for table in self.root_tables:
+            if table.name in valid_tables:
+                diag.root_tables.add(table)
+        # Copy relevant tables
+        for table in self.tables:
+            if table.name in valid_tables:
+                diag.tables.add(table)
+        return diag
+
+    def __str__(self):
+        ret = '@startuml\n'
+        if len(self.root_tables) > 0:
+            ret += 'package "Root Tables" {\n'
+            for table in self.root_tables:
+                ret += '    ' + str(table)
+            ret += '}\n\n'
+        for table in self.tables:
+            ret += str(table)
+        ret += '\n'
+        for ta, tb in self.links:
+            ret += ta + ' --> ' + tb + '\n'
+        ret += '\n'
+        ret += '@enduml\n'
+        return ret
+
+    def get_link(self):
+        enc = almost_base64.deflate_and_encode(str(self))
+        return 'http://www.plantuml.com/plantuml/img/' + enc
 
 
-
+def save_table_imgs(schema):
+    img_dir = 'docs/img/'
+    main_diag = Diagram(schema)
+    for table_name, table in schema['tables'].iteritems():
+        diag = main_diag.center_on(table_name)
+        filename = img_dir + table_name.lower() + '.txt'
+        with open(filename, 'w') as fp:
+            fp.write(str(diag))
 
 
 def main():
-    with open('unified.extschema.json', 'r') as fp:
     #with open('myschema.json', 'r') as fp:
+    with open('unified.extschema.json', 'r') as fp:
         schema = json.load(fp, object_pairs_hook=OrderedDict)
-    doc = build_grouped_doc(schema)
-    #doc.printme()
+    diag = Diagram(schema)
+    doc = build_grouped_doc(schema, diag)
     doc.fix_links()
     save_tables(doc)
+
+    # diag = Diagram(schema)
+    # cdiag = diag.center_on('ACL')
+    # print cdiag
+    # img = almost_base64.deflate_and_encode(str(cdiag))
+    # print 'http://www.plantuml.com/plantuml/img/' + img
+
+    #save_table_imgs(schema)
+
+    #diag = Diagram(schema)
+    #cdiag = diag.center_on('ACL')
+    #diag.from_table('QoS', schema['tables']['QoS'])
+    #print cdiag
 
     # table = schema['tables']['Interface']
     # group = DocGroup()
@@ -350,6 +399,74 @@ def main():
 if __name__ == '__main__':
     main()
 
+
+    # def print_groups(groups, space=0):
+    #     pre = ' ' * space * 2 + unichr(746)
+    #     for group in groups:
+    #         print pre + group
+    #         print_groups(groups[group], space + 1)
+
+# def get_groups(table):
+#     columns = table['columns']
+#     groups = OrderedDict()
+#     for column_name, column in columns.iteritems():
+#         col_type = column['type']
+#         if isintance(col_type, dict) and 'valueMap' in col_type:
+#             grouped_keys = OrderedDict()
+#             for key_name, key in col_type['valueMap']:
+#                 if 'group' in key:
+#                     if key['group'] not in grouped_key:
+#                         grouped_cols[key['group']] = []
+#                     grouped_cols[key['group']].append(key)
+#
+#         else:
+#             if 'group' in column:
+#                 if isinstance(column['group'], list):
+#                     for group in column['group']:
+#                         add_to_groups(groups, group)
+#                 else:
+#                     add_to_groups(groups, column['group'])
+#     return groups
+
+# class DocGroup:
+#     def __init__(self, title='', obj=None, schema=None):
+#         self.subgroups = OrderedDict()
+#         self.subsections = []
+#         self.doc = DocSection(title, obj)
+#         self.schema = schema
+#
+#     def _add_to_subgroups(self, group, title, obj):
+#         paths = group.split('/')
+#         paths = paths[2:]
+#         cur_group = self
+#         for path in paths:
+#             if path not in cur_group.subgroups:
+#                 cur_group.subgroups[path] = DocGroup(title=path + ' group')
+#             cur_group = cur_group.subgroups[path]
+#         cur_group.subsections.append(DocSection(title, obj))
+#
+#     def add(self, title, obj):
+#         if isinstance(obj, dict) and 'group' in obj:
+#             if isinstance(obj['group'], list):
+#                 for group in obj['group']:
+#                     self._add_to_subgroups(group, title, obj)
+#             else:
+#                 self._add_to_subgroups(obj['group'], title, obj)
+#
+#     def to_doc_section(self):
+#         doc = DocSection()
+#         doc.title =  self.doc.title
+#         doc.text =  self.doc.text
+#         for section in self.subsections:
+#             doc.add(section)
+#         for group in self.subgroups.values():
+#             doc.add(group.to_doc_section())
+#         return doc
+#
+#     def from_table(self, table):
+#         columns = table['columns']
+#         for column_name, column in columns.iteritems():
+#             self.add(column_name, column)
 
 # class DocKey:
 #     def __init__(self, key_name='', key=None):

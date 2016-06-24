@@ -1,5 +1,7 @@
 # QoS
 
+![QoS_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXS3yO0KR6mMD49sSpFICalIYrDGyJGKxEoGbmPN59Qcvs5NLSd5150Na5vLWLy85bjBLjGFPnGKr3CRbSaZDIm6v5000)
+
 Used to specify named profiles of scheduling configuration. Ports use a schedule
 profile to configure their packet queue servicing behavior.
 

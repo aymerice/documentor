@@ -1,5 +1,7 @@
 # Neighbor
 
+![Neighbor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1R_KpFICfFmY1HiR1OqGdHmWhoIzA3KrJrF1pewhbeiBeYmio0sx2eXqG7vH2NPvBhW5khfsO7Me8a23kRWSKlDIGCu5)
+
 List of all the connected neighbors.
 
 ## 1. Neighbor information group

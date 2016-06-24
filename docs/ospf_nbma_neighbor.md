@@ -1,6 +1,6 @@
 # OSPF_NBMA_Neighbor
 
-![OSPF_NBMA_Neighbor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2BzqlDJCz8oYzIiB5Hq0ZHoG7oIjABKbFpD1Nix50KElaw4b3DXMgYhguT5grSN0wfUIaWLm00)
+![OSPF_NBMA_Neighbor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2BzqlDJCz8oYzIiB5Hq0ZHoG7oIjABKbFpD1Nix50KElaw4b2DQg2khXqMdLmEgNafG3S0)
 
 ## 1. Configuration group
 

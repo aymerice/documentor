@@ -1,6 +1,6 @@
 # OSPF_Router
 
-![OSPF_Router_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3yelBKbLiB5Hq0ZHoSbCpoX9BqfDpTDKiBD3LkKJx8XFJK1-KGb1Cy0s5M5NneMiGbVN3cmYXY22ZrqAw4ekBeVKl1IG7m40)
+![OSPF_Router_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3yelBKbLiB5Hq0ZHoSbCpoX9BqfDpTDKiBD3LkKJx8XFJK1-KGb1Cy0s5M5NXgn0LzSER22688AFNGheI2w7rBmKe0y1)
 
 ## 1. Configuration group
 

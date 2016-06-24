@@ -1,6 +1,6 @@
 # Route
 
-![Route_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQ3yqf9K1HiR1OqGdPpCz8oIzABKr3nD1JixhbekBeWQlzIAaepy0kog84h2WjomItD1BD3LjGEfGU913UNYSaZDIm6v5G00)
+![Route_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQ3yqf9K1HiR1OqGdPpCz8oIzABKr3nD1JixhbekY1A_r8gIZFm2x8eWIiA2tB1BGupNrRK3AK7YGStaSaZDIm4w5000)
 
 Global routes information base within an [System](system.html).
 

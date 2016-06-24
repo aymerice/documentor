@@ -1,6 +1,6 @@
 # Mirror
 
-![Mirror_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd0goan9JrMmiL7G2D79oKpFA4alIatDqrImiuEg2CWlAi4dxvjPL9HVX5q55rHILzSER0uNr3eG7oB5nUMGcfS2SWy0)
+![Mirror_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd0goan9JrMmiL7G2D79oKpFA4alIatDqrImiuEg2CWlAi4dxvjPL9HVX5q5L4vNrmvi31VKDX0V8iNba9gN0dGD)
 
 Mirror sessions referenced from a [Bridge](bridge.html).
 

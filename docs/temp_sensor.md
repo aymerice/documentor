@@ -1,6 +1,6 @@
 # Temp_sensor
 
-![Temp_sensor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWkJIgkB2v9pLMmiL7G2D79oKpFA4alIatDqrImiuCg2adDBOWlJiqhpY_2hemBOOokhXsoUYukXzIy591z)
+![Temp_sensor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWkJIgkB2v9pLMmiL7G2D79oKpFA4alIatDqrImiuCg2adDBOWlJiqhpY_2hWnXYgwk7R9oBeVKl1IWRG00)
 
 ## 1. Status group
 

@@ -1,6 +1,6 @@
 # OSPF_Summary_Address
 
-![OSPF_Summary_Address_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3oxDpKqigentJ4afIWKAsjWeQ8Jev6IcPvIa5wMcvcagsDaXgtSiIat4heWB8Q-hQuVLT2ukXzIy590B)
+![OSPF_Summary_Address_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3oxDpKqigentJ4afIWKAsjWeQ8Jev6IcPvIa5wMcvcagsDaXgtSiIat4hWWXhQjhXzLmBeVKl1IW_G00)
 
 ## 1. Configuration group
 

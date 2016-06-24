@@ -1,6 +1,6 @@
 # OSPF_LSA
 
-![OSPF_LSA_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2BzmbsLB2nKT08qSd9JCyeIIzAJStJLB2pGrRZM9IQI51HK7vfIMeHTcLS26DqTUtW5dCXQqIHu798pKi1kHG0)
+![OSPF_LSA_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2BzmbsLB2nKT08qSd9JCyeIIzAJStJLB2pGrRZM9IQI51HK7vfIMeHTcK8KtHrxU3sSY7hGv5mICrB0ReJ)
 
 ## 1. status group
 

@@ -1,6 +1,6 @@
 # OSPF_Neighbor
 
-![OSPF_Neighbor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2BzqlDJCz8oYzIiB5Hq0ZHoG7oIjABKbFpD1Nix50KElaw4g_QCwyajIWjCJaLkqekD4MwkdQepk52THn27jaLN5mEgNaf80y1)
+![OSPF_Neighbor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2BzqlDJCz8oYzIiB5Hq0ZHoG7oIjABKbFpD1Nix50KElaw4g_QCwyajIWjCJaLkqeqDRgwTgYkuK9r6q8UsH5S3gbvAK3l0000)
 
 ## 1. status group
 

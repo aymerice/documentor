@@ -1,6 +1,6 @@
 # QoS_COS_Map_Entry
 
-![QoS_COS_Map_Entry_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEwvQBYw8ei3yu7Xd_-1utyI2UDUyag9AxEgve8RfwjfXQk7YSaZDIm4v2W00)
+![QoS_COS_Map_Entry_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEwvQBeYQmFpWU6V_u7ZVn89urxoIeahiog56wUhQOUhWSaZDIm6w2000)
 
 Contains COS map entries used by QoS Trust Mode. It associates each priority to
 local_priority (required), and (optionally), color and description.

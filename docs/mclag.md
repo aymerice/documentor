@@ -1,6 +1,6 @@
 # MCLAG
 
-![MCLAG_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1Lzd7qTt1HiR1OqGdPpCz8oIzABKr3nD1JixhbekBeYQi20tx2eWqW7vHINOvRaWfklgse4L8N61Hd9nEQJcfO1S2G00)
+![MCLAG_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9Y1Lzd7qTt1HiR1OqGdPpCz8oIzABKr3nD1JixhbekY9Am83Vi2Y3I0Vb59TZb8MRhwjg1rI1nWIPoEQJcfG2T2000)
 
 ## 1. MCLAG Device configuration group
 

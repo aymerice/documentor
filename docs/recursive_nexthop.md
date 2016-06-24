@@ -1,6 +1,6 @@
 # Recursive_Nexthop
 
-![Recursive_Nexthop_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQ3KvDAYuioor7Y_r8gIZFm21HiR1OqGdPpCz8oIzABKr3nD1JixhbekBeZwi20tx2eWqW7vHINOvRamRTBLjGEPXqC6P1GNbqDgNWh89m00)
+![Recursive_Nexthop_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQ3KvDAYuioor7Y_r8gIZFm21HiR1OqGdPpCz8oIzABKr3nD1JixhbekYFAm83Vi2Y3I0Vb59TZbCUtHrRK36OT31cGIbqDgNWhG6m00)
 
 Recursive next hop resolution. When a protocol has a new recursive next hop and
 its reachability is unknown, the protocol requests the recursive next hop to be

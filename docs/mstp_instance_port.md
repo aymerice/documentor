@@ -1,6 +1,6 @@
 # MSTP_Instance_Port
 
-![MSTP_Instance_Port_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0D3Wc8zym3YkObfyO7v1ULADZOA6Y4wEHafcUKf1UbfkPfAjZPOLEDJo5kWxXGpT3LjSFY1YuipWAf1CjnEQJcfO1y0000)
+![MSTP_Instance_Port_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0D3Wc8zym3YkObfyO7v1ULADZOA6Y4wEHafcUKf1UbfkPfAjZPOLEDJo5kWr2DqDMrm-84BYok0ga4opcavgK0tGy0)
 
 This represents information regarding a specific Port within the bridge's bridge
 protocol entity, for a given MSTI.

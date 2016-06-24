@@ -1,6 +1,6 @@
 # VLAN
 
-![VLAN_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd0goan9JrMmiL7G2D79oKpFA4alIatDqrImiuEgy0qE2OZtp0Fgoql6gp3Cnz4FdxoZimy-wO3yeXA2xd3EpytDpoFW72wiIdLrxS1Ev0Ax4yG3EeWBwd-u9AfluS9Wny5vN0wfUIcWC0G0)
+![VLAN_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd0goan9JrMmiL7G2D79oKpFA4alIatDqrImiuEgy0qE2OZtp0Fgoql6gp3Cnz4FdxoZimy-wO3yeXA2xd3EpytDpoFW7AmgTNNjm2xa0ZiJn0EwXmlgVRWagcVXmc2tmNaEgNafm104)
 
 ## 1. MACs Validity group
 

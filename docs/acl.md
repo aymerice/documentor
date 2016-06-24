@@ -1,6 +1,6 @@
 # ACL
 
-![ACL_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEwvQBYw8eZ0VHp_iIY3o0Vb59VZa7Przi4jpWKtMrRK3AU426mFZG1q6ut8vfEQbWBm4)
+![ACL_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEwvQBeYQC1z7F-mg8F81-KKb-EGTdNsmIuCDrjMr0wdW0fi2uq2T1UCwfEQb0Fq3)
 
 ## 1. Access Control List Status group
 

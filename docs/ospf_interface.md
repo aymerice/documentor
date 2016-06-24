@@ -1,6 +1,6 @@
 # OSPF_Interface
 
-![OSPF_Interface_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWZ8BofHiB5Hq0ZHoSbCpoX9BqfDpTDKiBE3oli71xZ5-wK2fPBoYmWg3Cl9pCicgCephoIrA2qnEPMWIiUYr4JiYhWGyhgwTcZcSg5P0rS1ymXE1M0FO9C5XHCNbqDgNWeex000)
+![OSPF_Interface_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWZ8BofHiB5Hq0ZHoSbCpoX9BqfDpTDKiBE3oli71xZ5-wK2fPBoYmWg3Cl9pCicgCephoIrA2qnEPMWIiUYr4JiYX3IkhfsQCPoeTa2Lm7p1qu5OFTZamK54vT3QbuACEG0)
 
 ## 1. status group
 

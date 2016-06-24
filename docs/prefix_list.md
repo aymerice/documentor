@@ -1,6 +1,6 @@
 # Prefix_List
 
-![Prefix_List_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXO2YrBJCYdYVpE8I1HiR1OqGdPpCz8oIzABKr3nD1JixhbekBeZAeFpIajHutyI2UDUyag9AxAgvq5NfwjeXsy75vP2Qbm9o6W00)
+![Prefix_List_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXO2YrBJCYdYVpE8I1HiR1OqGdPpCz8oIzABKr3nD1JixhbekYCAW_DAIr7ZVn89urxoIeahiYj4LwUhQ8Tl0vP2Qbm9q5m00)
 
 ## 1. Global IP Address Prefix List Configuration group
 

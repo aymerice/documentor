@@ -1,6 +1,6 @@
 # Notification_Subscription
 
-![Notification_Subscription_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl3BBybCoqnEBCdCpuiFBaqgJYxAB01n56ni53H2T78oqpDAqejIK_Cq5UpikBYu75BpKa3Q)
+![Notification_Subscription_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl3BBybCoqnEBCdCpuiFBaqgJYxAB01n56ni53H2T78oqpDAqejIK_Cq5Upik1nIyrA0cW40)
 
 ## 1. Configuration group
 

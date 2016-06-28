@@ -1,6 +1,6 @@
 # Route_Map
 
-![Route_Map_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQ3yqfBKUD_40WKR6mMD49sSpFICalIYrDGyJGKxEwvQBeVKl1IWKG00)
+![Route_Map_table_img](http://www.plantuml.com/plantuml/img/0Ra0Hlz0StHXSdHrRMmAS65ZQs5dPI0YKczlT21KOM9iPNCY87iAOsnXStCWKczrT6LVJM5m2dqAQ6baPI1ZQN9ZR6KAQ6baPI1jPMrYPN9p2cnbPsLkP21oQMTeT0fZRsvqQMvrRtCWR6bkPI0j83nYFdDqSczkPpmlOZuWScLcPN9bRcDb2cHlT7HbP21iQMvb82qWF6a-TsLXQpmlQJuWScLcPN9bRcDb2cLkP6nbPsLkP0f0PMvaTMri)
 
 ## 1. Global Route Map Configuration group
 

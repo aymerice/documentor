@@ -1,6 +1,6 @@
 # Q_Profile_Entry
 
-![Q_Profile_Entry_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWYC3oZAJylCIOrtpIifgbImiL7G2D79oKpFA4alIatDqrImi-DoICrB0Me1)
+![Q_Profile_Entry_table_img](http://www.plantuml.com/plantuml/img/0R80JVz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1HNr1oRsPfR6LVHMvqSdaAVGfeQMHb86DfScDiPGfeQMHb86rbRM9bSdCAR6LdPMva879fPsXq2cDlRdHfRdLlSo1iQMvb82qWF68-StHoRsvdF2zYFY1oPMPbScLkOsKAP6zqT6La86nfRcKWBI0yQJvtPM5hF2zfFY1oPMPbScLkOsKAPMvaR6LdPMva2a1bRcHrRMmA)
 
 Contains configuration parameters for one queue of one profile.
 

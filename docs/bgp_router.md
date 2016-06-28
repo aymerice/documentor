@@ -1,6 +1,6 @@
 # BGP_Router
 
-![BGP_Router_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd1o3uWFoYyjIIrIiB5Hq0ZHoSbCpoX9BqfDpTDKiBFZSaZDIm6g1W00)
+![BGP_Router_table_img](http://www.plantuml.com/plantuml/img/0Qq0Klz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo12Hr1VKczrT6Lo2dqAQ6baPI1ZQN9ZR6KAQ6baPI1jPMrYPN9p2cnbPsLkP21oQMTeT0fZRsvqQMvrRtCWR6bkPI0j83nYFdDqSczkPpmlOZuWScLcPN9bRcDb2cHlT7HbP21iQMvb82qWF6a-TsLXQpmlQJuWScLcPN9bRcDb2cLkP6nbPsLkP0f0PMvaTMri)
 
 ## 1. Configuration group
 

@@ -1,6 +1,6 @@
 # LED
 
-![LED_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWkJIgkB2v9pLMmiL7G2D79oKpFA4alIatDqrImiuCgyd5rmIwDqAshQmTInkMGcfS2D1q0)
+![LED_table_img](http://www.plantuml.com/plantuml/img/0Sa0Dlz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1JTM9pUNDqPMqAOsnXStCWJ4L42dqAJ4L483mjTIqWKtLYStbpT6Lj2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfiPMTbRcGWScbdQ7GAOszkT6bkTMzp86nfRcKWBI0yOZvpT79lRcSyBs8-879bPcLoPMvZPGfaRtHqPMGWR6bkPI0j83nfFdTbOMiyBsa-879bPcLoPMvZPGfbRcHiPMTbRcGAG6LkP7LjR0e0)
 
 ## 1. Status group
 

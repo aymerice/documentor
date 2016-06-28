@@ -1,6 +1,6 @@
 # sFlow
 
-![sFlow_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXU3AufBKN0KR6mMD49sSpFICalIYrDGyJGKxEoHLnMuv-UNO5TLoGOtGrRM3gEDoICrB0TeE)
+![sFlow_table_img](http://www.plantuml.com/plantuml/img/0TG0A_z0StHXSdHrRMmAS65ZQs5dPI0YKczlT21KOM9iPNCY87iAOsnXStCWKtbpT6Lj2cDiONDp87D6R6zt2dqASqPiRtSWF2raBI1JUNDqPMqAQ6baPI1ZQN9ZR6KAQ6baPI1jPMrYPN9p2cnbPsLkP21oQMTeT0fZRsvqQMvrRtCWR6bkPI0j83nYFdDqSczkPpmlOZuWScLcPN9bRcDb2cHlT7HbP21iQMvb82qWF6a-TsLXQpmlQJuWScLcPN9bRcDb2cLkP6nbPsLkP0f0PMvaTMri)
 
 A set of sFlow(R) configurations.  sFlow is a protocol for remote monitoring of
 switches.

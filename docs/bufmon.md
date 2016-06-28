@@ -1,6 +1,6 @@
 # bufmon
 
-![bufmon_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQJIjDpyF0KR6mMD49sSpFICalIYrDGyJGKxEwvQBeVKl1IWEG00)
+![bufmon_table_img](http://www.plantuml.com/plantuml/img/0RO0IVz0StHXSdHrRMmAS65ZQs5dPI0YKczlT21KOM9iPNCY87iAOsnXStCWOdLcRMzk2dqAQ6baPI1ZQN9ZR6KAQ6baPI1jPMrYPN9p2cnbPsLkP21oQMTeT0fZRsvqQMvrRtCWR6bkPI0j83nYFdDqSczkPpmlOZuWScLcPN9bRcDb2cHlT7HbP21iQMvb82qWF6a-TsLXQpmlQJuWScLcPN9bRcDb2cLkP6nbPsLkP0f0PMvaTMri)
 
 Configuration and status of the counters per Capacity Monitoring feature
 

@@ -1,6 +1,6 @@
 # DHCPSrv_Option
 
-![DHCPSrv_Option_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLd3nS0w83qujAaijKh2nKT08qSd9JCyeIIzAJStJLB2pGr8MN5GMxrzGafcVXrqbib6wkdPeUhWSKlDIWFO2)
+![DHCPSrv_Option_table_img](http://www.plantuml.com/plantuml/img/0UC07Fz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo14I4DGNrDbSdPbSWfZR65pSo14I4DGKt9sNqzmT6blRWfz2aH8Gr1JSdPVJt1qQMzk83mjTIqWH4X3K5zJPN9sPN8AQ6baPI1ZQN9ZR6KAQ6baPI1jPMrYPN9p2cnbPsLkP21oQMTeT0fZRsvqQMvrRtCWR6bkPI0j83nYFdDqSczkPpmlOZuWScLcPN9bRcDb2cHlT7HbP21iQMvb82qWF6a-TsLXQpmlQJuWScLcPN9bRcDb2cLkP6nbPsLkP0f0PMvaTMri)
 
 Configuration to specify extra options (other than standard options) that would
 be sent to the DHCP clients.

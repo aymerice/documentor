@@ -1,4 +1,4 @@
 # Fan
 
-![Fan_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWkJIgkB2v9pLMmiL7G2D79oKpFA4alIatDqrImiuCgSalCmowDqAshQmTInkMGcfS2D1q0)
+![Fan_table_img](http://www.plantuml.com/plantuml/img/0Sa0Dlz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1JTM9pUNDqPMqAOsnXStCWHc5k2dqAHc5k83mjTIqWKtLYStbpT6Lj2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfiPMTbRcGWScbdQ7GAOszkT6bkTMzp86nfRcKWBI0yOZvpT79lRcSyBs8-879bPcLoPMvZPGfaRtHqPMGWR6bkPI0j83nfFdTbOMiyBsa-879bPcLoPMvZPGfbRcHiPMTbRcGAG6LkP7LjR0e0)
 

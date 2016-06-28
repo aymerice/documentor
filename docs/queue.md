@@ -1,6 +1,6 @@
 # Queue
 
-![Queue_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWiJIrDLR2nKT08qSd9JCyeIIzAJStJLB2put98pKi1AWG0)
+![Queue_table_img](http://www.plantuml.com/plantuml/img/0QW0L_z0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1HTMLrPGfz2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfiPMTbRcGWScbdQ7GAOszkT6bkTMzp86nfRcKWBI0yOZvpT79lRcSyBs8-879bPcLoPMvZPGfaRtHqPMGWR6bkPI0j83nfFdTbOMiyBsa-879bPcLoPMvZPGfbRcHiPMTbRcGAG6LkP7LjR0e0)
 
 Contains scheduling parameters for one queue of one profile.
 

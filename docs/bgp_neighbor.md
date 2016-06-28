@@ -1,6 +1,6 @@
 # BGP_Neighbor
 
-![BGP_Neighbor_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl3CAqajIajCJbMmiL7G2D79oKpFA4alIatDqrImiuCgSd8FYFTB1SeavHTXLuUYGbVN3aKBfYpSLYw7rBmKe6i0)
+![BGP_Neighbor_table_img](http://www.plantuml.com/plantuml/img/0Ve01Vz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo19RdHbScPXOsKAOsnXStCWGaTGNqvbQMTeOczo2dqAGaTGNqvbQMTeOczo82raBJuWIMvqPN9cOMDb2a97K5zEPMbdQ69lSY0yBNKj8497K5zEPMbdQ69lSWfeQMHb86DfScDiPGfeQMHb86rbRM9bSdCAR6LdPMva879fPsXq2cDlRdHfRdLlSo1iQMvb82qWF68-StHoRsvdF2zYFY1oPMPbScLkOsKAP6zqT6La86nfRcKWBI0yQJvtPM5hF2zfFY1oPMPbScLkOsKAPMvaR6LdPMva2a1bRcHrRMmA)
 
 This table holds both BGP neighbors and BGP peer groups.  A boolean named
 is_peer_group identifies whether a specific entry is a bgp neighbor or a peer

@@ -1,6 +1,6 @@
 # Nexthop
 
-![Nexthop_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuIf8JCvEJ4zLK0hApozH24bCoaajLbAevb80WkISnE9YXQ3yqf9K1HiR1OqGdPpCz8oIzABKr3nD1JixhbekY1A_r8gIZFm2x8eWIWBoYqgmoqFCrzMrWnd31JCE90RIn-MGcfS2T2m0)
+![Nexthop_table_img](http://www.plantuml.com/plantuml/img/0G01__v0StHXSdHrRMmAS65ZQs5dPI0YKczlT21KOM9iPNCY87iAOsnXStCWKczrT6KAVGfqRsTbT6XbSY1x2cDiONDp84vbU7HeRt0AOsnXStCWK6zoT0fz2avbU7HeRt0WBcGkFY1GRt9q2avbU7HeRt0WF2raBI1IRtLqPGfeQMHb86DfScDiPGfeQMHb86rbRM9bSdCAR6LdPMva879fPsXq2cDlRdHfRdLlSo1iQMvb82qWF68-StHoRsvdF2zYFY1oPMPbScLkOsKAP6zqT6La86nfRcKWBI0yQJvtPM5hF2zfFY1oPMPbScLkOsKAPMvaR6LdPMva2a1bRcHrRMmA)
 
 Global list of all the nexthops as used by the [Route](route.html) table. Each entry
 in the [Route](route.html) can have a reference to one or many(for ECMP) entries in

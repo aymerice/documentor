@@ -1,6 +1,6 @@
 # Power_supply
 
-![Power_supply_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLWWkJIgkB2v9pLMmiL7G2D79oKpFA4alIatDqrImiuCg2iWlJosABoujACYfnAuEOOokhXsAUYw7rBmKe7q0)
+![Power_supply_table_img](http://www.plantuml.com/plantuml/img/0Ti09Fz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1JTM9pUNDqPMqAOsnXStCWK6ztPN9VStLmS6nv2dqAK6ztPN9VStLmS6nv83mjTIqWKtLYStbpT6Lj2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfiPMTbRcGWScbdQ7GAOszkT6bkTMzp86nfRcKWBI0yOZvpT79lRcSyBs8-879bPcLoPMvZPGfaRtHqPMGWR6bkPI0j83nfFdTbOMiyBsa-879bPcLoPMvZPGfbRcHiPMTbRcGAG6LkP7LjR0e0)
 
 Information for a power supply unit (PSU).
 

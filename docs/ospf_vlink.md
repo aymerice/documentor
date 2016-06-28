@@ -1,6 +1,6 @@
 # OSPF_Vlink
 
-![OSPF_Vlink_table_img](http://www.plantuml.com/plantuml/img/SoWkIImgAStDuKhEIImkLl0F3d2B3yl9pCjMiB5Hq0ZHoSbCpoX9BqfDpTDKiBD3LkMPLv9Qb9QOd8fT9PeQNLqx9CEv75BpKe2s0W00)
+![OSPF_Vlink_table_img](http://www.plantuml.com/plantuml/img/0U407lz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1FKr16NrPiQMvh2cDiONDp84zJK4PVIMvqPN9cOMDb2dqAJrDGHbzMR6bkQo0yBdKk84zJK4PVIMvqPN9cOMDb2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfiPMTbRcGWScbdQ7GAOszkT6bkTMzp86nfRcKWBI0yOZvpT79lRcSyBs8-879bPcLoPMvZPGfaRtHqPMGWR6bkPI0j83nfFdTbOMiyBsa-879bPcLoPMvZPGfbRcHiPMTbRcGAG6LkP7LjR0e0)
 
 ## 1. Configuration group
 

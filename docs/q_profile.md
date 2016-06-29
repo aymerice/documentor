@@ -18,9 +18,18 @@ The maximum number of queues is hardware dependent.
 
 There must be a user-defined name of the schedule profile.
 
-## 2. Hardware Default group
+## 2. Common Columns group
 
-### 2.1 hw_default column
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 2.1 external_ids column
+
+### 2.2 other_config column
+
+## 3. Hardware Default group
+
+### 3.1 hw_default column
 
 When true, this row contains the hardware default queue profile.
 

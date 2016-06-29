@@ -5,3 +5,28 @@
 Configuration to specify extra options (other than standard options) that would
 be sent to the DHCP clients.
 
+## 1. Ungrouped group
+
+### 1.1 option_number column
+
+Specifies the number of the extra option that should be sent to the DHCP
+clients. The option number would be ignored if option name is specified.
+
+### 1.2 option_name column
+
+Specifies the name of the extra option that should be sent to the DHCP clients.
+
+### 1.3 match_tags column
+
+The option and option value specified in the configuration would be sent only if
+the DHCP request from the client matches all the tags specified in this list.
+
+### 1.4 option_value column
+
+Specifies the value of the extra option that should be sent to the DHCP clients.
+
+### 1.5 ipv6 column
+
+Set this value to `true` if the configured option is for IPv6 and set to `false`
+for IPv4 option. If not specifed, the configured option would be used for IPv4.
+

@@ -33,3 +33,7 @@ Key-value pairs that specifies BOOTP options for the DHCP clients.
 The filename is keyed by match tag. If no key is specified, default key is
 no_matching_tag.
 
+## 2. Ungrouped group
+
+### 2.1 other_config column
+

@@ -34,23 +34,34 @@ of the packet will not be changed.
 This is a switch internal meta-data value that will be associated with the
 packet. This value will be used later to select the egress queue for the packet.
 
-## 2. Hardware Default group
+## 2. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 2.1 other_config column
+
+### 2.2 external_ids column
+
+## 3. Hardware Default group
 
 The key-value pairs document the hardware defaults for configuration columns in
 this row.
 
-### 2.1 hw_defaults : default_local_priority key
+### 3.1 hw_defaults column
+
+### 3.2 hw_defaults : default_local_priority key
 
 When missing, the default local_priority is obtained from the
 [hw_defaults](qos_dscp_map_entry.html#hw-defaults-column) of the
 [QoS_COS_Map_Entry](qos_cos_map_entry.html) row indexed by the top 3-bits of this
 row's code_point (i.e. class selector bits cs0 through cs7).
 
-### 2.2 hw_defaults : default_priority_code_point key
+### 3.3 hw_defaults : default_priority_code_point key
 
 When missing, the default is not to remark packets' 802.1Q priority.
 
-### 2.3 hw_defaults : default_color key
+### 3.4 hw_defaults : default_color key
 
 When missing, the default is 'green'.
 

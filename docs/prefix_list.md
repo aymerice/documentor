@@ -12,3 +12,14 @@ Prefix list entries keyed by preference value.
 
 Name of the prefix list.
 
+### 1.3 description column
+
+## 2. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 2.1 external_ids column
+
+### 2.2 other_config column
+

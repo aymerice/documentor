@@ -46,23 +46,47 @@ No counts may be available initally until the first
 update period has elasped.  If any key-value pairs remains missing, the hardware
 does not support that count.
 
-### 3.1 statistics : tx_bytes key
+### 3.1 statistics column
+
+### 3.2 statistics : tx_bytes key
 
 Number of bytes transmitted through this mirror.
 
-### 3.2 statistics : tx_packets key
+### 3.3 statistics : tx_packets key
 
 Number of packets transmitted through this mirror.
 
-## 4. Mirror Session Status group
+## 4. Ungrouped group
 
-### 4.1 mirror_status column
+### 4.1 name column
+
+There must be a user-defined name of the mirror session.
+
+### 4.2 active column
+
+The intended state of the mirror session: active or inactive. The
+[operation_state](mirror.html#mirror-status-operation-state-key) value contains the actual state
+in hardware (e.g. active, inactive, or error). When missing or false, the state
+is inactive.
+
+## 5. Mirror Session Status group
+
+### 5.1 mirror_status column
 
 Key-value pair(s) that report mirror status in hardware.
 
-### 4.2 mirror_status : operation_state key
+### 5.2 mirror_status : operation_state key
 
 Operational state of the mirror session in hardware. Only the value "active"
 means the hardware mirroring is running. Any other value, or if the key is
 missing, means the session is not running.
+
+## 6. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 6.1 other_config column
+
+### 6.2 external_ids column
 

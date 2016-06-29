@@ -26,12 +26,23 @@ point for this entry.
 This is a switch internal meta-data value that will be associated with the
 packet. This value will be used later to select the egress queue for the packet.
 
-## 2. Hardware Default group
+## 2. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 2.1 other_config column
+
+### 2.2 external_ids column
+
+## 3. Hardware Default group
 
 The key-value pairs document the hardware defaults for configuration columns in
 this row.
 
-### 2.1 hw_defaults : default_local_priority key
+### 3.1 hw_defaults column
+
+### 3.2 hw_defaults : default_local_priority key
 
 When missing, the default is the 802.1Q (Annex I) Traffic Type assignment for
 this row's Priority Code Point:
@@ -43,7 +54,7 @@ local_priority=4 +code_point 5 (Traffic Type VO) local_priority=5 +code_point 6
 (Traffic Type IC) local_priority=6 +code_point 7 (Traffic Type NC)
 local_priority=7
 
-### 2.2 hw_defaults : default_color key
+### 3.3 hw_defaults : default_color key
 
 When missing, the default is 'green'.
 

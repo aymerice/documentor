@@ -12,3 +12,16 @@ Route map entries keyed by preference value.
 
 Reference to the VRF table, to which this route belongs.
 
+## 2. Status group
+
+### 2.1 status column
+
+## 3. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 3.1 external_ids column
+
+### 3.2 other_config column
+

@@ -7,7 +7,9 @@ Virtual Routing and Forwarding.
 
 ## 1. Status group
 
-### 1.1 status : namespace_ready key
+### 1.1 status column
+
+### 1.2 status : namespace_ready key
 
 Indicates whether Linux namespace exists for this VRF. If not set, the assumed
 value is false.
@@ -42,4 +44,13 @@ BGP routers keyed by ASN value.
 ### 2.7 dhcp_server column
 
 DHCP Server in the VRF.
+
+## 3. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 3.1 other_config column
+
+### 3.2 external_ids column
 

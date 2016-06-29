@@ -154,73 +154,75 @@ limit is exceeded, a system log message is logged.
 
 The `statistics` column contains various counters about this BGP neighbor.
 
-### 2.1 statistics : bgp_peer_dynamic_cap_in_count key
+### 2.1 statistics column
+
+### 2.2 statistics : bgp_peer_dynamic_cap_in_count key
 
 This indicates how many times a dynamic cap message has been received.
 
-### 2.2 statistics : bgp_peer_refresh_in_count key
+### 2.3 statistics : bgp_peer_refresh_in_count key
 
 This indicates how many times a frefresh message has been received.
 
-### 2.3 statistics : bgp_peer_update_in_count key
+### 2.4 statistics : bgp_peer_update_in_count key
 
 This indicates how many times an update message has been received.
 
-### 2.4 statistics : bgp_peer_readtime key
+### 2.5 statistics : bgp_peer_readtime key
 
 This indicates the last time an update or keepalive message has been received.
 
-### 2.5 statistics : bgp_peer_refresh_out_count key
+### 2.6 statistics : bgp_peer_refresh_out_count key
 
 This indicates how many times a refresh message has been sent.
 
-### 2.6 statistics : bgp_peer_dropped_count key
+### 2.7 statistics : bgp_peer_dropped_count key
 
 This indicates the number of times peers have been dropped from the established
 state.
 
-### 2.7 statistics : bgp_peer_keepalive_in_count key
+### 2.8 statistics : bgp_peer_keepalive_in_count key
 
 This indicates how many times a keepalive message has been received.
 
-### 2.8 statistics : bgp_peer_open_in_count key
+### 2.9 statistics : bgp_peer_open_in_count key
 
 This indicates how many times an open message has been received.
 
-### 2.9 statistics : bgp_peer_open_out_count key
+### 2.10 statistics : bgp_peer_open_out_count key
 
 This indicates how many times an open message has been sent.
 
-### 2.10 statistics : bgp_peer_keepalive_out_count key
+### 2.11 statistics : bgp_peer_keepalive_out_count key
 
 This indicates how many times a keepalive message has been sent.
 
-### 2.11 statistics : bgp_peer_dynamic_cap_out_count key
+### 2.12 statistics : bgp_peer_dynamic_cap_out_count key
 
 This indicates how many times a dynamic cap message has been sent.
 
-### 2.12 statistics : bgp_peer_resettime key
+### 2.13 statistics : bgp_peer_resettime key
 
 Indicates the last time peer was reset.
 
-### 2.13 statistics : bgp_peer_notify_in_count key
+### 2.14 statistics : bgp_peer_notify_in_count key
 
 This indicates how many times a notify message has been received.
 
-### 2.14 statistics : bgp_peer_notify_out_count key
+### 2.15 statistics : bgp_peer_notify_out_count key
 
 This indicates how many times a notify message has been sent.
 
-### 2.15 statistics : bgp_peer_established_count key
+### 2.16 statistics : bgp_peer_established_count key
 
 This indicates the number of times peers have been established.
 
-### 2.16 statistics : bgp_peer_uptime key
+### 2.17 statistics : bgp_peer_uptime key
 
 This indicates how long since peer has been in the established state, or since
 the last route update was received.
 
-### 2.17 statistics : bgp_peer_update_out_count key
+### 2.18 statistics : bgp_peer_update_out_count key
 
 This indicates how many times an update message has been sent.
 
@@ -269,4 +271,13 @@ Peer group entry.
 This represents the BGP neighbor state at this specific instance in time.  The
 value can be one of Idle, Connect, Active, OpenSent, OpenConfirm, Established,
 Clearing or Deleted and can change any time.  Default is Idle.
+
+## 5. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 5.1 external_ids column
+
+### 5.2 other_config column
 

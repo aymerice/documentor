@@ -8,71 +8,75 @@
 
 The list of all the OSPFv2 neighbors on this OSPFv2 Interface.
 
-### 1.2 status : active key
+### 1.2 status column
+
+### 1.3 status : active key
 
 Updates status whether the interface is active. The default value is true.
 
-### 1.3 status : hello_due_at key
+### 1.4 status : hello_due_at key
 
 Updates when the next hello is due on the interface in seconds. The default
 value is hello_interval on this interface.
 
-### 1.4 status : if_out_cost key
+### 1.5 status : if_out_cost key
 
 The interface out cost. If not configured, this is calculated as per the auto
 cost bandwidth reference and interface speed.
 
-### 1.5 ifsm_state column
+### 1.6 ifsm_state column
 
 OSPFv2 Interface FSM states. The default value is "depend_upon".
 
 ## 2. statistics group
 
-### 2.1 statistics : ls_ack_rcvd key
+### 2.1 statistics column
+
+### 2.2 statistics : ls_ack_rcvd key
 
 The total number of Link State Ack packets received on the interface.
 
-### 2.2 statistics : hello_rcvd key
+### 2.3 statistics : hello_rcvd key
 
 The total number of hello packets received on the interface.
 
-### 2.3 statistics : ls_req_sent key
+### 2.4 statistics : ls_req_sent key
 
 The total number of Link State Request packets sent on the interface.
 
-### 2.4 statistics : ls_req_rcvd key
+### 2.5 statistics : ls_req_rcvd key
 
 The total number of Link State Request packets received on the interface.
 
-### 2.5 statistics : ls_upd_rcvd key
+### 2.6 statistics : ls_upd_rcvd key
 
 The total number of Link State Update packets received on the interface.
 
-### 2.6 statistics : ls_upd_sent key
+### 2.7 statistics : ls_upd_sent key
 
 The total number of Link State Update packets sent on the interface.
 
-### 2.7 statistics : rx_discard key
+### 2.8 statistics : rx_discard key
 
 The total number of  received packets discarded on the interface.
 
-### 2.8 statistics : hello_sent key
+### 2.9 statistics : hello_sent key
 
 The total number of hello packets sent on the interface.
 
-### 2.9 statistics : state_changes key
+### 2.10 statistics : state_changes key
 
 The total number of state changes on the interface.
 
-### 2.10 statistics : db_desc_sent key
+### 2.11 statistics : db_desc_sent key
 
 The total number of DataBase Description packets sent on the interface.
 
-### 2.11 statistics : db_desc_rcvd key
+### 2.12 statistics : db_desc_rcvd key
 
 The total number of DataBase Description packets received on the interface.
 
-### 2.12 statistics : ls_ack_sent key
+### 2.13 statistics : ls_ack_sent key
 
 The total number of Link State Ack packets sent on the interface.
 

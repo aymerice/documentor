@@ -35,47 +35,28 @@ Key-value pairs that report bridge status.
 Actual size of the mac table. If mac-table-size exceeds hardware capability,
 then this field will show the real size used.
 
-## 3. Core Features group
+## 3. Other Features group
 
-### 3.1 name column
+### 3.1 datapath_id column
 
-Bridge identifier.  Should be alphanumeric and no more than about 8 bytes long.
-Must be unique among the names of ports, interfaces, and bridges on a host.
-
-### 3.2 mstp_instances column
-
-MSTP configuration for individual instance.
-
-### 3.3 vlans column
-
-VLANs included in the bridge.
-
-### 3.4 ports column
-
-Ports included in the bridge.
-
-### 3.5 mstp_common_instance column
-
-MSTP configuration for CIST(Common Instance Spanning Tree).
-
-## 4. Other Features group
-
-### 4.1 mirrors column
+### 3.2 mirrors column
 
 [Mirror](mirror.html) references for sessions configured in this bridge.
 
-### 4.2 other_config : hwaddr key
+### 3.3 other_config column
+
+### 3.4 other_config : hwaddr key
 
 An Ethernet address in the form _xx_:_xx_:_xx_:_xx_:_xx_:_xx_ to set the
 hardware address of the local port and influence the datapath ID.
 
-### 4.3 other_config : mac-table-size key
+### 3.5 other_config : mac-table-size key
 
 The maximum number of MAC addresses to learn.  The default is currently 16K.
 The value, if specified, is forced into a reasonable range, currently 10 to
 256K.
 
-### 4.4 other_config : mac-aging-time key
+### 3.6 other_config : mac-aging-time key
 
 The maximum number of seconds to retain a MAC learning entry for which no
 packets have been seen.  The default is currently 300 seconds (5 minutes).  The
@@ -89,24 +70,60 @@ host that rarely transmits packets.  To reduce the incidence of unnecessary
 flooding, use a MAC aging time longer than the maximum interval at which a host
 will ordinarily transmit packets.
 
-### 4.5 datapath_type column
+### 3.7 datapath_version column
+
+### 3.8 datapath_type column
 
 Name of datapath provider.
+
+## 4. Core Features group
+
+### 4.1 name column
+
+Bridge identifier.  Should be alphanumeric and no more than about 8 bytes long.
+Must be unique among the names of ports, interfaces, and bridges on a host.
+
+### 4.2 mstp_instances column
+
+MSTP configuration for individual instance.
+
+### 4.3 vlans column
+
+VLANs included in the bridge.
+
+### 4.4 ports column
+
+Ports included in the bridge.
+
+### 4.5 mstp_common_instance column
+
+MSTP configuration for CIST(Common Instance Spanning Tree).
 
 ## 5. MSTP Configurations group
 
 MSTP global configurations for all MSTIs.
 
-### 5.1 other_config : mstp_config_name key
+### 5.1 other_config column
+
+### 5.2 other_config : mstp_config_name key
 
 Set this value to specify the MSTP configuration name. Default value is system
 MAC address.
 
-### 5.2 other_config : mstp_config_revision key
+### 5.3 other_config : mstp_config_revision key
 
 Set this value to specify the configuration revision number. Default value is 0.
 
-### 5.3 mstp_enable column
+### 5.4 mstp_enable column
 
 Set this value to `true`, to enable MSTP. Default value is `false`.
+
+## 6. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 6.1 other_config column
+
+### 6.2 external_ids column
 

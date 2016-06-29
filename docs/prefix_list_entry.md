@@ -4,7 +4,22 @@
 
 ## 1. Global Prefix List Entries Configuration group
 
-### 1.1 action column
+### 1.1 le column
+
+### 1.2 ge column
+
+### 1.3 prefix column
+
+### 1.4 action column
 
 There are three types, permit, deny, and any.
+
+## 2. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 2.1 other_config column
+
+### 2.2 external_ids column
 

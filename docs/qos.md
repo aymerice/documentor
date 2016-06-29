@@ -5,9 +5,18 @@
 Used to specify named profiles of scheduling configuration. Ports use a schedule
 profile to configure their packet queue servicing behavior.
 
-## 1. Hardware Default group
+## 1. Common Columns group
 
-### 1.1 hw_default column
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 1.1 external_ids column
+
+### 1.2 other_config column
+
+## 2. Hardware Default group
+
+### 2.1 hw_default column
 
 When true, this row signifies the hardware default schedule profile.
 
@@ -17,16 +26,16 @@ Default schedule profile is "Strict Priority" when any of the following occur:
 hw_default true +Any [Queue](queue.html) rows referenced do not have their hw_default
 true
 
-## 2. Configuration group
+## 3. Configuration group
 
-### 2.1 queues column
+### 3.1 queues column
 
 Schedule parameters for individual queues.
 
 Queues are numbered in *priority order*, with zero being the lowest priority.
 The maximum number of queues is hardware dependent.
 
-### 2.2 name column
+### 3.2 name column
 
 There must be a user-defined name of the schedule profile.
 

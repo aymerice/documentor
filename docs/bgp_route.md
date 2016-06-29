@@ -127,27 +127,33 @@ Local preference of the BGP route. Default value is 0.
 Represents nexthops for this entry. Each entry in the [BGP_Route](bgp_route.html) can
 have a reference to one or many(for ECMP) nexthop entries.
 
-## 2. Path attributes group
+## 2. Ungrouped group
+
+### 2.1 peer column
+
+## 3. Path attributes group
 
 The `path_attributes` column contains key-value pairs that represent route
 attributes.
 
-### 2.1 path_attributes : bgp_loc_pref key
+### 3.1 path_attributes column
+
+### 3.2 path_attributes : bgp_loc_pref key
 
 Local preference path attribute. Used by BGP to influence in the best path
 selection. Default value is 0.
 
-### 2.2 path_attributes : bgp_origin key
+### 3.3 path_attributes : bgp_origin key
 
 Indicates whether a route is `IGP`, `EGP` or `incomplete`. Default is
 incomplete.
 
-### 2.3 path_attributes : bgp_flags key
+### 3.4 path_attributes : bgp_flags key
 
 Route status flags. Allowed values are `history`, `damped`,`multipath`,`valid`,
 `selected` Default value is 0.
 
-### 2.4 path_attributes : bgp_as_path key
+### 3.5 path_attributes : bgp_as_path key
 
 List of AS path number for a route. Default is 0. Example: 200,300,400
 

@@ -4,16 +4,25 @@
 
 Contains scheduling parameters for one queue of one profile.
 
-## 1. Hardware Default group
+## 1. Common Columns group
 
-### 1.1 hw_default column
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 1.1 external_ids column
+
+### 1.2 other_config column
+
+## 2. Hardware Default group
+
+### 2.1 hw_default column
 
 When true, this row contains the hardware default schedule profile parameters
 for this queue.
 
-## 2. Configuration group
+## 3. Configuration group
 
-### 2.1 algorithm column
+### 3.1 algorithm column
 
 This parameter selects the scheduling behavior of the queue:
 
@@ -26,7 +35,7 @@ all non-empty dwrr queues in relation to their queue weights.
 
 If this parameter is missing, it is assumed to be 'strict'.
 
-### 2.2 weight column
+### 3.2 weight column
 
 The weight value for this queue. The maximum weight is hardware dependent.
 

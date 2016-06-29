@@ -129,11 +129,13 @@ Set this value to `false` not to transmit the BPDUs Default is `true`.
 
 ## 3. Statistics group
 
-### 3.1 mstp_statistics : mstp_BPDUs_Rx key
+### 3.1 mstp_statistics column
+
+### 3.2 mstp_statistics : mstp_BPDUs_Rx key
 
 The received BPDU count.
 
-### 3.2 mstp_statistics : mstp_BPDUs_Tx key
+### 3.3 mstp_statistics : mstp_BPDUs_Tx key
 
 The transmitted BPDU count.
 

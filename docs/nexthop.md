@@ -10,16 +10,18 @@ this table.
 
 Status information to indicate the current state of the nexthop.
 
-### 1.1 status : arp_resolved key
+### 1.1 status column
+
+### 1.2 status : arp_resolved key
 
 Indicate if ARP is resolved for this entry. If the ARP entry is missing, this
 value is `false`
 
-### 1.2 status : error key
+### 1.3 status : error key
 
 Human readable error string.
 
-### 1.3 status : hw_configured key
+### 1.4 status : hw_configured key
 
 Indicate if nexthop programmed in the asic. If the ARP entry is missing, this
 value is `false`
@@ -51,4 +53,13 @@ IP address of the nexthop device.
 
 List of outgoing ports. Nexthop entries of type `unicast` can have atmost 1
 port.
+
+## 3. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 3.1 other_config column
+
+### 3.2 external_ids column
 

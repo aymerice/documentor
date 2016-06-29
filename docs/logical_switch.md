@@ -4,3 +4,25 @@
 
 Configuration for identifying overlay networks associated with bridges.
 
+## 1. Ungrouped group
+
+### 1.1 tunnel_key column
+
+Tunnel key used in the overlay. For VXLAN, this is the VNI.
+
+### 1.2 bridge column
+
+Reference to a [Bridge](bridge.html) participating in the overlay.
+
+### 1.3 from column
+
+The entity managing the overlay.
+
+### 1.4 name column
+
+Name of the overlay network.
+
+### 1.5 description column
+
+Description of the overlay network.
+

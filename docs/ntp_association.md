@@ -16,21 +16,23 @@ Key id is not used when using an unauthenticated association.
 
 FQDN or ip address for the association.
 
-### 1.3 association_attributes : ref_clock_id key
+### 1.3 association_attributes column
+
+### 1.4 association_attributes : ref_clock_id key
 
 The refclock driver ID, if available. A refclock driver ID like "127.127.1.0"
 for non uni/multi/broadcast associations
 
-### 1.4 association_attributes : ntp_version key
+### 1.5 association_attributes : ntp_version key
 
 NTP version to use for when communicating with this association. Default is 3.
 
-### 1.5 association_attributes : prefer key
+### 1.6 association_attributes : prefer key
 
 Preference flag to suggest for this association. Set this to `true` to enable
 preference for this association. Default is false.
 
-### 1.6 vrf column
+### 1.7 vrf column
 
 Specifies which VRF this association should connect with.
 

@@ -30,37 +30,39 @@ implementation-specific. A value of 0 disables inactivity probes.
 
 ## 2. Status group
 
-### 2.1 status : locks_waiting key
+### 2.1 status column
+
+### 2.2 status : locks_waiting key
 
 Space-separated list of the names of OVSDB locks that the connection is
 currently waiting to acquire.  Omitted if the connection is not waiting for any
 locks.
 
-### 2.2 status : locks_lost key
+### 2.3 status : locks_lost key
 
 Space-separated list of the names of OVSDB locks that the connection has had
 stolen by another OVSDB client.  Omitted if no locks have been stolen from this
 connection.
 
-### 2.3 status : bound_port key
+### 2.4 status : bound_port key
 
 When [target](manager.html#target-column) is `ptcp:` or `pssl:`, this is the TCP port on
 which the OVSDB server is listening.  (This is is particularly useful when
 [target](manager.html#target-column) specifies a port of 0, allowing the kernel to choose
 any available port.)
 
-### 2.4 status : last_error key
+### 2.5 status : last_error key
 
 A human-readable description of the last error on the connection to the manager;
 i.e. `strerror(errno)`.  This key will exist only if an error has occurred.
 
-### 2.5 status : sec_since_connect key
+### 2.6 status : sec_since_connect key
 
 The amount of time since this manager last successfully connected to the
 database (in seconds). Value is empty if manager has never successfully
 connected.
 
-### 2.6 status : state key
+### 2.7 status : state key
 
 The state of the connection to the manager:
 
@@ -73,12 +75,12 @@ The state of the connection to the manager:
 These values may change in the future.  They are provided only for human
 consumption.
 
-### 2.7 status : locks_held key
+### 2.8 status : locks_held key
 
 Space-separated list of the names of OVSDB locks that the connection holds.
 Omitted if the connection does not hold any locks.
 
-### 2.8 status : n_connections key
+### 2.9 status : n_connections key
 
 When [target](manager.html#target-column) specifies a connection method that listens for
 inbound connections (e.g. `ptcp:` or `pssl:`) and more than one connection is
@@ -88,12 +90,12 @@ key-value pair is omitted.
 When multiple connections are active, status columns and key-value pairs (other
 than this one) report the status of one arbitrarily chosen connection.
 
-### 2.9 status : sec_since_disconnect key
+### 2.10 status : sec_since_disconnect key
 
 The amount of time since this manager last disconnected from the database (in
 seconds). Value is empty if manager has never disconnected.
 
-### 2.10 is_connected column
+### 2.11 is_connected column
 
 `true` if currently connected to this manager, `false` otherwise.
 
@@ -166,7 +168,9 @@ If not specified, the default is implementation-specific.
 Additional configuration for a connection between the manager and the OpenSwitch
 Database.
 
-### 4.1 other_config : dscp key
+### 4.1 other_config column
+
+### 4.2 other_config : dscp key
 
 The Differentiated Service Code Point (DSCP) is specified using 6 bits in the
 Type of Service (TOS) field in the IP header. DSCP provides a mechanism to
@@ -174,4 +178,13 @@ classify the network traffic and provide Quality of Service (QoS) on IP
 networks.  The DSCP value specified here is used when establishing the
 connection between the manager and the OpenSwitch.  If no value is specified, a
 default value of 48 is chosen.  Valid DSCP values must be in the range 0 to 63.
+
+## 5. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 5.1 other_config column
+
+### 5.2 external_ids column
 

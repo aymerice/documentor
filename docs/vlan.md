@@ -74,50 +74,61 @@ Detailed reason for error state.  Expected empty when state is 'applied'
 
 The version of aclv4_in_cfg that corresponds to this status.
 
-### 4.6 aclv4_in_statistics : sequence_number key
+### 4.6 aclv4_in_statistics column
+
+### 4.7 aclv4_in_statistics : sequence_number key
 
 Statistics for the ACL applied to this port for ACEs that have the 'count'
 keyword specified.  Statistics are key/value pairs of ACL sequence number and
 integer representing the statistics for that entry.
 
-### 4.7 aclv4_in_statistics_clear_performed column
+### 4.8 aclv4_in_statistics_clear_performed column
 
 The number of times that ACL statistics for this VLAN have been cleared..
 
-### 4.8 aclv4_in_applied column
+### 4.9 aclv4_in_applied column
 
 Current, successfully applied ACL to this VLAN, as identified in the [ACL](acl.html)
 
-## 5. Hardware VLAN Configuration group
+## 5. Common Columns group
 
-### 5.1 hw_vlan_config column
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 5.1 other_config column
+
+### 5.2 external_ids column
+
+## 6. Hardware VLAN Configuration group
+
+### 6.1 hw_vlan_config column
 
 Key-value pairs that represent the configuration passed down to hardware.
 
-### 5.2 hw_vlan_config : enable key
+### 6.2 hw_vlan_config : enable key
 
 The possible values are "true" and "false".
 
-## 6. VLAN Status group
+## 7. VLAN Status group
 
-### 6.1 oper_state column
+### 7.1 oper_state column
 
 Operational state of this VLAN.
 
-### 6.2 oper_state_reason column
+### 7.2 oper_state_reason column
 
 Human readable reason for the operational state of this VLAN.
 
-## 7. Internal VLAN Config group
+## 8. Internal VLAN Config group
 
 Information about how this VLAN is used internally by the system. VLAN could be
 used for L3 interface, sflow, etc.
 
-### 7.1 internal_usage column
+### 8.1 internal_usage column
 
 Key-value pairs that represent how this VLAN is used internally by the system.
 
-### 7.2 internal_usage : l3port key
+### 8.2 internal_usage : l3port key
 
 VLAN is used internally by ASIC to configure L3 behavior of the port. The value
 is the port name that uses this VLAN.

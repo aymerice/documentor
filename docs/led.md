@@ -8,13 +8,26 @@
 
 Status of the LED is the current operational status.
 
-## 2. Configuration group
+## 2. Common Columns group
 
-### 2.1 state column
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 2.1 other_config column
+
+### 2.2 external_ids column
+
+## 3. Configuration group
+
+### 3.1 state column
 
 State of the LED controls the lighting behavior.
 
-### 2.2 id column
+### 3.2 id column
 
 Logical name of the LED.
+
+## 4. Ungrouped group
+
+### 4.1 hw_config column
 

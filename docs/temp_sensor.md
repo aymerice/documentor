@@ -15,17 +15,40 @@ Recommended minimum fan setting based on current temperature. The fand process
 should choose the worst-case sensor fan_state when determining the fan setting
 for the subsystem.
 
-## 2. Readings group
+## 2. Ungrouped group
 
-### 2.1 min column
+### 2.1 name column
+
+Logical name of the temperature sensor, including the subsystem name and numeric
+identifier of the temperature sensor.
+
+### 2.2 location column
+
+Descriptive text for the physical location of the temperature sensor relative to
+the subsystem.
+
+### 2.3 hw_config column
+
+## 3. Readings group
+
+### 3.1 min column
 
 Historic minimum (since last restart of tempd process), in milidegrees Celcius.
 
-### 2.2 max column
+### 3.2 max column
 
 Historic maximum (since last restart of tempd process), in milidegrees Celcius.
 
-### 2.3 temperature column
+### 3.3 temperature column
 
 Current temperature reading, in milidegrees Celcius.
+
+## 4. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 4.1 other_config column
+
+### 4.2 external_ids column
 

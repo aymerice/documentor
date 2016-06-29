@@ -35,38 +35,42 @@ receive logic is enabled. Defaults to `false` if unset.
 The observed state of the physical network link.  This is ordinarily the link's
 carrier status.
 
-### 1.6 mclag_status : actor_port_id key
+### 1.6 mclag_status column
+
+### 1.7 mclag_status : actor_port_id key
 
 Actor port ID is in the form of device priority (2 bytes) followed by port id (2
 bytes) encoded as string in which each byte value is separated by a colon.
 Example: 00:08:00:12
 
-### 1.7 mclag_status : actor_key key
+### 1.8 mclag_status : actor_key key
 
 The actor key in use (2 bytes) encoded as a string in which each byte value is
 separated by a colon. Example: 80:00
 
-### 1.8 mclag_status : actor_system_id key
+### 1.9 mclag_status : actor_system_id key
 
 Actor system ID is in the form of device priority (2 bytes) followed by device
 MAC address (6 bytes) encoded as string in which each byte value is separated by
 a colon.  Example:  00:08:00:02:82:1f:60:4a Device priority range is 0 to 15.
 Default device priority value is `8`.
 
-### 1.9 kernel_interface_ready column
+### 1.10 kernel_interface_ready column
 
 Indicates whether kernel interface is provisioned.  Default is false.
 
-### 1.10 link_resets column
+### 1.11 link_resets column
 
 The number of times OpenSwitch has observed the
 [link_state](interface.html#link-state-column) of this [Interface](interface.html) change.
 
-### 1.11 duplex column
+### 1.12 duplex column
 
 The duplex mode of the physical network link.
 
-### 1.12 hw_status : ready key
+### 1.13 hw_status column
+
+### 1.14 hw_status : ready key
 
 Status information about hardware resource allocation on the interface. It is
 set as false if there are not enough hardware resources or if the resources
@@ -74,109 +78,109 @@ required to configure features like ACLs in the interface have not been
 allocated yet.  It is set as true when all the resources have been allocated.
 The default value is `false`.
 
-### 1.13 hw_status : ready_state_blocked_reason key
+### 1.15 hw_status : ready_state_blocked_reason key
 
 Enumeration that identifies the asserting protocol that causes the ready to be
 "false".
 
-### 1.14 lacp_current column
+### 1.16 lacp_current column
 
 Boolean value indicating LACP status for this interface.  If true, this
 interface has current LACP information about its LACP partner.  This information
 may be used to monitor the health of interfaces in a LACP enabled port.  This
 column will be empty if LACP is not enabled.
 
-### 1.15 status column
+### 1.17 status column
 
 Key-value pairs that report port status.  Supported status values are
 [type](interface.html#type-column)-dependent; some interfaces may not have a valid
 [driver_name](interface.html#status-driver-name-key), for example.
 
-### 1.16 status : driver_version key
+### 1.18 status : driver_version key
 
 The version string of the device driver controlling the network adapter.
 
-### 1.17 status : kernel_interface_error key
+### 1.19 status : kernel_interface_error key
 
 Human readable kernel interface provisioning error description.
 
-### 1.18 status : driver_name key
+### 1.20 status : driver_name key
 
 The name of the device driver controlling the network adapter.
 
-### 1.19 status : firmware_version key
+### 1.21 status : firmware_version key
 
 The version string of the network adapter's firmware, if available.
 
-### 1.20 lacp_status column
+### 1.22 lacp_status column
 
 Key-value pairs that report LACP protocol status.
 
-### 1.21 lacp_status : lacp_blocked key
+### 1.23 lacp_status : lacp_blocked key
 
 lacp_blocked is set to 'true' if LACP decides to block the interface. Default
 value is `false`.
 
-### 1.22 lacp_status : actor_system_id key
+### 1.24 lacp_status : actor_system_id key
 
 The LACP actor system ID in the form of priority and mac address tuple.
 
-### 1.23 lacp_status : partner_state key
+### 1.25 lacp_status : partner_state key
 
 The LACP partner protocol state information in an abbreviated form reporting
 status/state bit values. For example,
 (Actv:1,TmOut:1,Aggr:1,Sync:1,Col:1,Dist:1,Def:0,Exp:0)
 
-### 1.24 lacp_status : partner_port_id key
+### 1.26 lacp_status : partner_port_id key
 
 The LACP partner port ID in the form of priority and port number tuple.
 
-### 1.25 lacp_status : actor_key key
+### 1.27 lacp_status : actor_key key
 
 The LACP actor key in use.
 
-### 1.26 lacp_status : partner_key key
+### 1.28 lacp_status : partner_key key
 
 The LACP partner key in use.
 
-### 1.27 lacp_status : partner_system_id key
+### 1.29 lacp_status : partner_system_id key
 
 The LACP partner system ID in the form of priority and mac address tuple.
 
-### 1.28 lacp_status : actor_port_id key
+### 1.30 lacp_status : actor_port_id key
 
 The LACP actor port ID in the form of priority and port number tuple.
 
-### 1.29 lacp_status : actor_state key
+### 1.31 lacp_status : actor_state key
 
 The LACP actor protocol state information in an abbreviated form reporting
 status/state bit values. For example,
 (Actv:1,TmOut:1,Aggr:1,Sync:1,Col:1,Dist:1,Def:0,Exp:0)
 
-### 1.30 mac_in_use column
+### 1.32 mac_in_use column
 
 The MAC address in use by this [Interface](interface.html).
 
-### 1.31 link_speed column
+### 1.33 link_speed column
 
 The negotiated speed of the physical network link in bits per second. Valid
 values are positive integers greater than 0.
 
-### 1.32 pause column
+### 1.34 pause column
 
 The status of the Ethernet PAUSE (link-level flow control) mode of the physical
 network link.
 
-### 1.33 admin_state column
+### 1.35 admin_state column
 
 The administrative state of the physical network link.
 
-### 1.34 bond_status column
+### 1.36 bond_status column
 
 Key-value pairs that report the status of a bond.  This applies to both static
 or LACP bonds.
 
-### 1.35 bond_status : state key
+### 1.37 bond_status : state key
 
 Enumeration indicating the forwarding state of the interface when it is
 configured as a member of a LAG. * Up: The interface is eligible and should be
@@ -185,7 +189,7 @@ eligible or should be blocked according to LACP.  If an interface is Rx disable,
 it is also Tx disable, thus, it is blocked * Down:  The interface is configured
 to be a member of a LAG, but it is either administratively or operatively down
 
-### 1.36 mtu column
+### 1.38 mtu column
 
 The MTU (maximum transmission unit); i.e. the largest amount of data that can
 fit into a single Ethernet frame. The standard Ethernet MTU is 1500 bytes.  Some
@@ -195,53 +199,55 @@ higher MTUs.
 This column will be empty for an interface that does not have an MTU as, for
 example, some kinds of tunnels do not.
 
-### 1.37 forwarding_state : interface_aggregation_forwarding key
+### 1.39 forwarding_state column
+
+### 1.40 forwarding_state : interface_aggregation_forwarding key
 
 Interface aggregation is set based on the information provided by protocols
 related to link aggregation. The asserting protocol setting the value of this
 key to be defined in the interface_aggregation_blocked_reason key. Default value
 is `false`.
 
-### 1.38 forwarding_state : interface_aggregation_blocked_reason key
+### 1.41 forwarding_state : interface_aggregation_blocked_reason key
 
 Enumeration that identifies the asserting protocol that causes the interface
 aggregation to be different from "forwarding".
 
-### 1.39 forwarding_state : forwarding key
+### 1.42 forwarding_state : forwarding key
 
 Enumeration that summarizes the state of the interface. Default value is
 `false`.
 
-### 1.40 error column
+### 1.43 error column
 
 If the configuration of the [Interface](interface.html) failed, OpenSwitch sets this
 column to an error description in human readable form.  Otherwise, OpenSwitch
 clears this column.
 
-### 1.41 LLDP Neighbor Info group
+### 1.44 LLDP Neighbor Info group
 
-#### 1.41.1 lldp_neighbor_info column
+#### 1.44.1 lldp_neighbor_info column
 
 Keys-value pairs of neighbor's port info as discovered by LLDP.
 
-#### 1.41.2 lldp_neighbor_info : port_description key
+#### 1.44.2 lldp_neighbor_info : port_description key
 
 The port description field shall contain an alpha-numeric string that indicates
 the port's description.
 
-#### 1.41.3 lldp_neighbor_info : port_mfs key
+#### 1.44.3 lldp_neighbor_info : port_mfs key
 
 Port maximum frame size.
 
-#### 1.41.4 lldp_neighbor_info : mgmt_ip_list key
+#### 1.44.4 lldp_neighbor_info : mgmt_ip_list key
 
 A comma-seperated list of management IP addresses.
 
-#### 1.41.5 lldp_neighbor_info : port_lastupdate key
+#### 1.44.5 lldp_neighbor_info : port_lastupdate key
 
 Time (posix seconds) of last update received.
 
-#### 1.41.6 lldp_neighbor_info : chassis_capability_available key
+#### 1.44.6 lldp_neighbor_info : chassis_capability_available key
 
 The chassis capabilities field contains a bit-map of the capabilities that
 define the primary function(s) of the system. A binary one in the associated bit
@@ -249,245 +255,245 @@ indicates the existence of that capability. Individual systems may indicate more
 than one implemented functional capability (for example, both a bridge and
 router capability).
 
-#### 1.41.7 lldp_neighbor_info : port_lastchange key
+#### 1.44.7 lldp_neighbor_info : port_lastchange key
 
 Time (posix seconds) of last change of values.
 
-#### 1.41.8 lldp_neighbor_info : port_id key
+#### 1.44.8 lldp_neighbor_info : port_id key
 
 The Port ID is a mandatory TLV that identifies the port component of the MSAP
 identifier associated with the transmitting LLDP agent.
 
-#### 1.41.9 lldp_neighbor_info : chassis_refcount key
+#### 1.44.9 lldp_neighbor_info : chassis_refcount key
 
 Chassis reference count.
 
-#### 1.41.10 lldp_neighbor_info : pids_len_list key
+#### 1.44.10 lldp_neighbor_info : pids_len_list key
 
 A comma-seperated list of length of protocol ID names.
 
-#### 1.41.11 lldp_neighbor_info : power_powertype key
+#### 1.44.11 lldp_neighbor_info : power_powertype key
 
 Power type or LLDP_DOT3_POWER_8023AT_OFF indicating source, priority, requested
 and allocated have no meaning.
 
-#### 1.41.12 lldp_neighbor_info : power_supported key
+#### 1.44.12 lldp_neighbor_info : power_supported key
 
 Power value is the power the neighbor supports.
 
-#### 1.41.13 lldp_neighbor_info : power_paircontrol key
+#### 1.44.13 lldp_neighbor_info : power_paircontrol key
 
 Describes the capability of controlling the power pairs functionality to switch
 pins for sourcing power. The value true indicate that the device has the
 capability to control the power pairs.  When false the PSE Pinout Alternative
 used cannot be controlled through the PethPsePortAdminEnable attribute.
 
-#### 1.41.14 lldp_neighbor_info : chassis_id key
+#### 1.44.14 lldp_neighbor_info : chassis_id key
 
 The Chassis ID identifies the chassis containing the IEEE 802 LAN station
 associated with the transmitting LLDP agent.
 
-#### 1.41.15 lldp_neighbor_info : port_id_subtype key
+#### 1.44.15 lldp_neighbor_info : port_id_subtype key
 
 The port ID subtype field shall contain an integer value indicating the basis
 for the identifier that is listed in the port ID field.
 
-#### 1.41.16 lldp_neighbor_info : chassis_capability_enabled key
+#### 1.44.16 lldp_neighbor_info : chassis_capability_enabled key
 
 The enabled capabilities field contains a bit map of the primary functions of
 the system. A binary one in a bit position indicates that the function is
 currently enabled.
 
-#### 1.41.17 lldp_neighbor_info : macphy_autoneg_enabled key
+#### 1.44.17 lldp_neighbor_info : macphy_autoneg_enabled key
 
 Link autonegotiation enabled.
 
-#### 1.41.18 lldp_neighbor_info : chassis_index key
+#### 1.44.18 lldp_neighbor_info : chassis_index key
 
 The interface index value used to identify the chassis.
 
-#### 1.41.19 lldp_neighbor_info : chassis_name key
+#### 1.44.19 lldp_neighbor_info : chassis_name key
 
 The system name field contains an alpha-numeric string that indicates the
 administratively assigned name.
 
-#### 1.41.20 lldp_neighbor_info : port_hidden_in key
+#### 1.44.20 lldp_neighbor_info : port_hidden_in key
 
 Considered as hidden for reception.
 
-#### 1.41.21 lldp_neighbor_info : port_id_len key
+#### 1.44.21 lldp_neighbor_info : port_id_len key
 
 Port ID length.
 
-#### 1.41.22 lldp_neighbor_info : mgmt_iface_list key
+#### 1.44.22 lldp_neighbor_info : mgmt_iface_list key
 
 A comma-seperated list of management IP interfaces.
 
-#### 1.41.23 lldp_neighbor_info : pids_name_list key
+#### 1.44.23 lldp_neighbor_info : pids_name_list key
 
 A comma-seperated list of protocol ID name.
 
-#### 1.41.24 lldp_neighbor_info : power_priority key
+#### 1.44.24 lldp_neighbor_info : power_priority key
 
 Power priority configured on the neighbor port.
 
-#### 1.41.25 lldp_neighbor_info : chassis_ttl key
+#### 1.44.25 lldp_neighbor_info : chassis_ttl key
 
 The Time To Live TLV indicates the number of seconds that the recipient LLDP
 agent is to regard the information associated with this MSAP identifier to be
 valid.
 
-#### 1.41.26 lldp_neighbor_info : vlan_name_list key
+#### 1.44.26 lldp_neighbor_info : vlan_name_list key
 
 A comma-seperated list of vlan names.
 
-#### 1.41.27 lldp_neighbor_info : port_hidden_out key
+#### 1.44.27 lldp_neighbor_info : port_hidden_out key
 
 Considered as hidden for transmission.
 
-#### 1.41.28 lldp_neighbor_info : macphy_mau_type key
+#### 1.44.28 lldp_neighbor_info : macphy_mau_type key
 
 Common enumeration values for repeater and interface MAU jack types.
 
-#### 1.41.29 lldp_neighbor_info : chassis_id_len key
+#### 1.44.29 lldp_neighbor_info : chassis_id_len key
 
 Chassis ID TLV length.
 
-#### 1.41.30 lldp_neighbor_info : power_source key
+#### 1.44.30 lldp_neighbor_info : power_source key
 
 Power Source code indicates neighbor Primary Power Source or the Backup Power
 Source.
 
-#### 1.41.31 lldp_neighbor_info : chassis_protocol key
+#### 1.44.31 lldp_neighbor_info : chassis_protocol key
 
 Chassis protocol name (LLDP).
 
-#### 1.41.32 lldp_neighbor_info : chassis_description key
+#### 1.44.32 lldp_neighbor_info : chassis_description key
 
 The chassis description field contains an alpha-numeric string that is the
 textual description of the network entity. It includes the full name and version
 identification of the hardware type, software operating system, and networking
 software.
 
-#### 1.41.33 lldp_neighbor_info : vlan_id_list key
+#### 1.44.33 lldp_neighbor_info : vlan_id_list key
 
 A comma-seperated list of vlan IDs.
 
-#### 1.41.34 lldp_neighbor_info : power_allocated key
+#### 1.44.34 lldp_neighbor_info : power_allocated key
 
 The power value is the power the neighbor allocates.
 
-#### 1.41.35 lldp_neighbor_info : port_protocol key
+#### 1.44.35 lldp_neighbor_info : port_protocol key
 
 Protocol used to get this port (LLDP).
 
-#### 1.41.36 lldp_neighbor_info : ppvids_ppvid_list key
+#### 1.44.36 lldp_neighbor_info : ppvids_ppvid_list key
 
 A comma-seperated list of port and protocol vlan IDs.
 
-#### 1.41.37 lldp_neighbor_info : port_pvid key
+#### 1.44.37 lldp_neighbor_info : port_pvid key
 
 The port VLAN identifier field shall contain the VLAN ID for the bridge port as
 defined in 8.4.4 of IEEE Std 802.1Q.
 
-#### 1.41.38 lldp_neighbor_info : macphy_autoneg_advertised key
+#### 1.44.38 lldp_neighbor_info : macphy_autoneg_advertised key
 
 Link autonegotiation advertized.
 
-#### 1.41.39 lldp_neighbor_info : macphy_autoneg_support key
+#### 1.44.39 lldp_neighbor_info : macphy_autoneg_support key
 
 Link autonnegotiation supported.
 
-#### 1.41.40 lldp_neighbor_info : ppvids_cap_list key
+#### 1.44.40 lldp_neighbor_info : ppvids_cap_list key
 
 A comma-seperated list of port and protocol vlan capablity.
 
-#### 1.41.41 lldp_neighbor_info : chassis_id_subtype key
+#### 1.44.41 lldp_neighbor_info : chassis_id_subtype key
 
 The chassis ID subtype field contains an integer value indicating the basis for
 the chassis ID entity listed in the chassis ID field.
 
-#### 1.41.42 lldp_neighbor_info : power_pairs key
+#### 1.44.42 lldp_neighbor_info : power_pairs key
 
 Describes or controls the pairs in use. A value of signal(1) means that the
 signal pairs only are in use. A value of spare(2) means that the spare pairs
 only are in use.
 
-#### 1.41.43 lldp_neighbor_info : power_requested key
+#### 1.44.43 lldp_neighbor_info : power_requested key
 
 The power value is the power the neighbor requests.
 
-### 1.42 LLDP status info group
+### 1.45 LLDP status info group
 
-#### 1.42.1 status column
+#### 1.45.1 status column
 
 Key-value pairs that report port status.  Supported status values are
 [type](interface.html#type-column)-dependent; some interfaces may not have a valid
 [driver_name](interface.html#status-driver-name-key), for example.
 
-#### 1.42.2 status : lldp_local_port_vlan key
+#### 1.45.2 status : lldp_local_port_vlan key
 
 Information about port VLAN config.
 
-#### 1.42.3 status : lldp_local_port_description key
+#### 1.45.3 status : lldp_local_port_description key
 
 Description of LLDP port in alpha-numeric format.
 
-### 1.43 IKE Status: ipsec_gre_ike only group
+### 1.46 IKE Status: ipsec_gre_ike only group
 
-#### 1.43.1 status : ipsec_bytes_out key
+#### 1.46.1 status : ipsec_bytes_out key
 
 Reports output bytes processed.
 
-#### 1.43.2 status : ipsec_sa_spi_out key
+#### 1.46.2 status : ipsec_sa_spi_out key
 
 Reports the Security Parameter Index used for SA outbound traffics.
 
-#### 1.43.3 status : ipsec_bytes_in key
+#### 1.46.3 status : ipsec_bytes_in key
 
 Reports input bytes processed.
 
-#### 1.43.4 status : ipsec_packets_out key
+#### 1.46.4 status : ipsec_packets_out key
 
 Reports output packets processed.
 
-#### 1.43.5 status : ipsec_ike_reauth_time key
+#### 1.46.5 status : ipsec_ike_reauth_time key
 
 Reports the epoch time when this connection re-authenticates.
 
-#### 1.43.6 status : ipsec_sa_spi_in key
+#### 1.46.6 status : ipsec_sa_spi_in key
 
 Reports the Security Parameter Index used for SA inbound traffics.
 
-#### 1.43.7 status : ipsec_ike_responder_spi key
+#### 1.46.7 status : ipsec_ike_responder_spi key
 
 Reports the IKE responder SPI.
 
-#### 1.43.8 status : ipsec_ike_initiator_spi key
+#### 1.46.8 status : ipsec_ike_initiator_spi key
 
 Reports the IKE initiator SPI.
 
-#### 1.43.9 status : ipsec_sa_expiration_time key
+#### 1.46.9 status : ipsec_sa_expiration_time key
 
 Reports the epoch time when this SA expires.
 
-#### 1.43.10 status : ipsec_ike_established_time key
+#### 1.46.10 status : ipsec_ike_established_time key
 
 Reports the epoch time when this connection is established.
 
-#### 1.43.11 status : ipsec_packets_in key
+#### 1.46.11 status : ipsec_packets_in key
 
 Reports input packets processed.
 
-#### 1.43.12 status : ipsec_sa_rekey_time key
+#### 1.46.12 status : ipsec_sa_rekey_time key
 
 Reports the epoch time when this SA re-keys.
 
-#### 1.43.13 status : ipsec_sa_state key
+#### 1.46.13 status : ipsec_sa_state key
 
 Reports the this SA state.
 
-#### 1.43.14 status : ipsec_ike_conn_state key
+#### 1.46.14 status : ipsec_ike_conn_state key
 
 Reports this connection state.
 
@@ -646,172 +652,184 @@ For each outbound queue, a count of the queue's total transmit errors or drops.
 
 For each outbound queue, a count of the queue's total packets transmitted.
 
-### 4.2 Layer3 - IP Statistics group
+### 4.2 Statistics: Successful transmit and receive counters group
 
-#### 4.2.1 statistics : ipv6_mc_tx_packets key
+#### 4.2.1 statistics column
 
-Number of transmitted ipv6 multicast packets.
-
-#### 4.2.2 statistics : ipv6_mc_rx_packets key
-
-Number of received ipv6 multicast packets.
-
-#### 4.2.3 statistics : ipv6_uc_rx_packets key
-
-Number of received ipv6 unicast packets.
-
-#### 4.2.4 statistics : ipv4_uc_rx_packets key
-
-Number of received ipv4 unicast packets.
-
-#### 4.2.5 statistics : ipv4_uc_tx_packets key
-
-Number of transmitted ipv4 unicast packets.
-
-#### 4.2.6 statistics : ipv6_mc_rx_bytes key
-
-Number of received ipv6 multicast bytes.
-
-#### 4.2.7 statistics : ipv6_mc_tx_bytes key
-
-Number of transmitted ipv6 multicast bytes.
-
-#### 4.2.8 statistics : ipv4_mc_rx_bytes key
-
-Number of received ipv4 multicast bytes.
-
-#### 4.2.9 statistics : ipv4_mc_tx_bytes key
-
-Number of transmitted ipv4 multicast bytes.
-
-#### 4.2.10 statistics : ipv4_uc_tx_bytes key
-
-Number of transmitted ipv4 unicast bytes.
-
-#### 4.2.11 statistics : ipv6_uc_tx_packets key
-
-Number of transmitted ipv6 unicast packets.
-
-#### 4.2.12 statistics : ipv4_mc_rx_packets key
-
-Number of received ipv4 multicast packets.
-
-#### 4.2.13 statistics : ipv4_mc_tx_packets key
-
-Number of transmitted ipv4 multicast packets.
-
-#### 4.2.14 statistics : ipv6_uc_rx_bytes key
-
-Number of received ipv6 unicast bytes.
-
-#### 4.2.15 statistics : ipv6_uc_tx_bytes key
-
-Number of transmitted ipv6 unicast bytes.
-
-#### 4.2.16 statistics : ipv4_uc_rx_bytes key
-
-Number of received ipv4 unicast bytes.
-
-### 4.3 Statistics: Receive errors group
-
-#### 4.3.1 statistics : rx_over_err key
-
-Number of packets with RX overrun.
-
-#### 4.3.2 statistics : rx_dropped key
-
-Number of packets dropped by RX.
-
-#### 4.3.3 statistics : rx_frame_err key
-
-Number of frame alignment errors.
-
-#### 4.3.4 statistics : rx_crc_err key
-
-Number of CRC errors.
-
-#### 4.3.5 statistics : rx_errors key
-
-Total number of receive errors, greater than or equal to the sum of the above.
-
-### 4.4 sFlow Statistics group
-
-#### 4.4.1 statistics : sflow_ingress_bytes key
-
-Number of ingress bytes sampled on an interface.
-
-#### 4.4.2 statistics : sflow_egress_bytes key
-
-Number of egress bytes sampled on an interface.
-
-#### 4.4.3 statistics : sflow_egress_packets key
-
-Number of egress packets sampled on an interface.
-
-#### 4.4.4 statistics : sflow_ingress_packets key
-
-Number of ingress packets sampled on an interface.
-
-### 4.5 Statistics: Transmit errors group
-
-#### 4.5.1 statistics : collisions key
-
-Number of collisions.
-
-#### 4.5.2 statistics : tx_dropped key
-
-Number of packets dropped by TX.
-
-#### 4.5.3 statistics : tx_errors key
-
-Total number of transmit errors, greater than or equal to the sum of the above.
-
-### 4.6 Statistics: Successful transmit and receive counters group
-
-#### 4.6.1 statistics : tx_packets key
+#### 4.2.2 statistics : tx_packets key
 
 Number of transmitted packets.
 
-#### 4.6.2 statistics : rx_packets key
+#### 4.2.3 statistics : rx_packets key
 
 Number of received packets.
 
-#### 4.6.3 statistics : tx_bytes key
+#### 4.2.4 statistics : tx_bytes key
 
 Number of transmitted bytes.
 
-#### 4.6.4 statistics : rx_bytes key
+#### 4.2.5 statistics : rx_bytes key
 
 Number of received bytes.
 
+### 4.3 Statistics: Receive errors group
+
+#### 4.3.1 statistics column
+
+#### 4.3.2 statistics : rx_over_err key
+
+Number of packets with RX overrun.
+
+#### 4.3.3 statistics : rx_dropped key
+
+Number of packets dropped by RX.
+
+#### 4.3.4 statistics : rx_frame_err key
+
+Number of frame alignment errors.
+
+#### 4.3.5 statistics : rx_crc_err key
+
+Number of CRC errors.
+
+#### 4.3.6 statistics : rx_errors key
+
+Total number of receive errors, greater than or equal to the sum of the above.
+
+### 4.4 Statistics: Transmit errors group
+
+#### 4.4.1 statistics column
+
+#### 4.4.2 statistics : collisions key
+
+Number of collisions.
+
+#### 4.4.3 statistics : tx_dropped key
+
+Number of packets dropped by TX.
+
+#### 4.4.4 statistics : tx_errors key
+
+Total number of transmit errors, greater than or equal to the sum of the above.
+
+### 4.5 Layer3 - IP Statistics group
+
+#### 4.5.1 statistics column
+
+#### 4.5.2 statistics : ipv6_mc_tx_packets key
+
+Number of transmitted ipv6 multicast packets.
+
+#### 4.5.3 statistics : ipv6_mc_rx_packets key
+
+Number of received ipv6 multicast packets.
+
+#### 4.5.4 statistics : ipv6_uc_rx_packets key
+
+Number of received ipv6 unicast packets.
+
+#### 4.5.5 statistics : ipv4_uc_rx_packets key
+
+Number of received ipv4 unicast packets.
+
+#### 4.5.6 statistics : ipv4_uc_tx_packets key
+
+Number of transmitted ipv4 unicast packets.
+
+#### 4.5.7 statistics : ipv6_mc_rx_bytes key
+
+Number of received ipv6 multicast bytes.
+
+#### 4.5.8 statistics : ipv6_mc_tx_bytes key
+
+Number of transmitted ipv6 multicast bytes.
+
+#### 4.5.9 statistics : ipv4_mc_rx_bytes key
+
+Number of received ipv4 multicast bytes.
+
+#### 4.5.10 statistics : ipv4_mc_tx_bytes key
+
+Number of transmitted ipv4 multicast bytes.
+
+#### 4.5.11 statistics : ipv4_uc_tx_bytes key
+
+Number of transmitted ipv4 unicast bytes.
+
+#### 4.5.12 statistics : ipv6_uc_tx_packets key
+
+Number of transmitted ipv6 unicast packets.
+
+#### 4.5.13 statistics : ipv4_mc_rx_packets key
+
+Number of received ipv4 multicast packets.
+
+#### 4.5.14 statistics : ipv4_mc_tx_packets key
+
+Number of transmitted ipv4 multicast packets.
+
+#### 4.5.15 statistics : ipv6_uc_rx_bytes key
+
+Number of received ipv6 unicast bytes.
+
+#### 4.5.16 statistics : ipv6_uc_tx_bytes key
+
+Number of transmitted ipv6 unicast bytes.
+
+#### 4.5.17 statistics : ipv4_uc_rx_bytes key
+
+Number of received ipv4 unicast bytes.
+
+### 4.6 sFlow Statistics group
+
+#### 4.6.1 statistics column
+
+#### 4.6.2 statistics : sflow_ingress_bytes key
+
+Number of ingress bytes sampled on an interface.
+
+#### 4.6.3 statistics : sflow_egress_bytes key
+
+Number of egress bytes sampled on an interface.
+
+#### 4.6.4 statistics : sflow_egress_packets key
+
+Number of egress packets sampled on an interface.
+
+#### 4.6.5 statistics : sflow_ingress_packets key
+
+Number of ingress packets sampled on an interface.
+
 ### 4.7 LLDP Interface Level Statistics group
 
-#### 4.7.1 lldp_statistics : lldp_rx_discard key
+#### 4.7.1 lldp_statistics column
+
+#### 4.7.2 lldp_statistics : lldp_rx_discard key
 
 Number of lldp packet received and discarded because of missing, out-of-order or
 incorrect TLVs.
 
-#### 4.7.2 lldp_statistics : lldp_rx_tlv_discard key
+#### 4.7.3 lldp_statistics : lldp_rx_tlv_discard key
 
 Number of lldp TLVs discarded because of errors.
 
-#### 4.7.3 lldp_statistics : lldp_tx_len_err key
+#### 4.7.4 lldp_statistics : lldp_tx_len_err key
 
 Number of lldp packet transmit error because of length.
 
-#### 4.7.4 lldp_statistics : lldp_rx_tlv_unknown key
+#### 4.7.5 lldp_statistics : lldp_rx_tlv_unknown key
 
 Number of lldp TLVs discarded because of unknown tlv.
 
-#### 4.7.5 lldp_statistics : lldp_rx_err key
+#### 4.7.6 lldp_statistics : lldp_rx_err key
 
 Number of lldp packets received with one or more detectable errors.
 
-#### 4.7.6 lldp_statistics : lldp_tx key
+#### 4.7.7 lldp_statistics : lldp_tx key
 
 Number of lldp packets transmitted.
 
-#### 4.7.7 lldp_statistics : lldp_rx key
+#### 4.7.8 lldp_statistics : lldp_rx key
 
 Number of lldp packets received.
 
@@ -885,43 +903,51 @@ The list of possible interface speeds, in megabits per second. If autoneg is
 true, this is the list of advertised speeds. If not, the first speed in the list
 is the fixed speed of [Interface](interface.html).
 
-## 7. Core Features group
+## 7. Common Columns group
 
-### 7.1 name column
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 7.1 external_ids column
+
+### 7.2 other_config column
+
+### 7.3 LLDP Interface configurations group
+
+#### 7.3.1 other_config column
+
+#### 7.3.2 other_config : lldp_enable_dir key
+
+LLDP interface level config.
+
+## 8. Core Features group
+
+### 8.1 name column
 
 Interface name.  Should be alphanumeric and no more than about 8 bytes long.
 May be the same as the port name, for non-bonded ports.  Must otherwise be
 unique among the names of ports, interfaces, and bridges on a host.
 
-## 8. Bonding Configuration group
+## 9. Bonding Configuration group
 
-### 8.1 other_config : lacp-port-priority key
+### 9.1 other_config column
+
+### 9.2 other_config : lacp-port-priority key
 
 The LACP port priority of this [Interface](interface.html).  In LACP negotiations
 [Interface](interface.html)s with numerically lower priorities are preferred for
 aggregation.
 
-### 8.2 other_config : lacp-port-id key
+### 9.3 other_config : lacp-port-id key
 
 The LACP port ID of this [Interface](interface.html).  Port IDs are used in LACP
 negotiations to identify individual ports participating in a bond.
 
-### 8.3 other_config : lacp-aggregation-key key
+### 9.4 other_config : lacp-aggregation-key key
 
 The LACP aggregation key of this [Interface](interface.html). [Interface](interface.html)s
 with different aggregation keys may not be active within a given [Port](port.html) at
 the same time.
-
-## 9. Common Columns group
-
-The overall purpose of these columns is described under `Common Columns` at the
-beginning of this document.
-
-### 9.1 LLDP Interface configurations group
-
-#### 9.1.1 other_config : lldp_enable_dir key
-
-LLDP interface level config.
 
 ## 10. Module Information group
 
@@ -1523,17 +1549,19 @@ and the other does not, the more specific one is matched first.
 [local_ip](interface.html#options-local-ip-key) if a port defines one and another port
 defines the other.
 
-### 11.1 options : key key
+### 11.1 options column
+
+### 11.2 options : key key
 
 Optional.  Shorthand to set `in_key` and `out_key` at the same time.
 
-### 11.2 options : local_ip key
+### 11.3 options : local_ip key
 
 The tunnel destination IP that received packets must match.
 
 + An IPv4 address (not a DNS name), e.g. `192.168.12.3`.
 
-### 11.3 options : tos key
+### 11.4 options : tos key
 
 Optional.  The value of the ToS bits to be set on the encapsulating packet.  ToS
 is interpreted as DSCP and ECN bits, ECN part must be zero.  It may also be the
@@ -1541,7 +1569,7 @@ word `inherit`, in which case the ToS will be copied from the inner packet if it
 is IPv4 or IPv6 (otherwise it will be 0).  The ECN fields are always inherited.
 Default is 0.
 
-### 11.4 options : out_key key
+### 11.5 options : out_key key
 
 Optional.  The key to be set on outgoing packets, one of:
 
@@ -1551,7 +1579,7 @@ specifying no [out_key](interface.html#options-out-key-key) at all.
 + A positive 24-bit (VXLAN). The tunnel sends packets only with the specified
 key.
 
-### 11.5 options : in_key key
+### 11.6 options : in_key key
 
 Optional.  The key that received packets must contain, one of:
 
@@ -1561,45 +1589,45 @@ equivalent to specifying no [in_key](interface.html#options-in-key-key) at all.
 + A positive 24-bit (VXLAN). The tunnel receives only packets with the specified
 key.
 
-### 11.6 options : df_default key
+### 11.7 options : df_default key
 
 Optional.  If enabled, the Don't Fragment bit will be set on tunnel outer
 headers to allow path MTU discovery. Default is enabled; set to `false` to
 disable.
 
-### 11.7 options : ttl key
+### 11.8 options : ttl key
 
 Optional.  The TTL to be set on the encapsulating packet.  It may also be the
 word `inherit`, in which case the TTL will be copied from the inner packet if it
 is IPv4 or IPv6 (otherwise it will be the system default, typically 64).
 Default is the system default TTL.
 
-### 11.8 options : remote_ip key
+### 11.9 options : remote_ip key
 
 Required.  The remote tunnel endpoint, one of:
 
 + An IPv4 address (not a DNS name), e.g. `192.168.0.123`. Only unicast endpoints
 are supported.
 
-### 11.9 Tunnel Options: ipsec_gre only group
+### 11.10 Tunnel Options: ipsec_gre only group
 
-#### 11.9.1 options : psk key
+#### 11.10.1 options : psk key
 
 Required for pre-shared key authentication.  Specifies a pre-shared key for
 authentication that must be identical on both sides of the tunnel.
 
-#### 11.9.2 options : private_key key
+#### 11.10.2 options : private_key key
 
 Optional for certificate authentication.  The name of a PEM file containing the
 private key associated with `certificate`. If `certificate` contains the private
 key, this option may be omitted.
 
-#### 11.9.3 options : certificate key
+#### 11.10.3 options : certificate key
 
 Required for certificate authentication.  The name of a PEM file containing a
 certificate that will be presented to the peer during authentication.
 
-#### 11.9.4 options : peer_cert key
+#### 11.10.4 options : peer_cert key
 
 Required for certificate authentication.  A string containing the peer's
 certificate in PEM format.  Additionally the host's certificate must be

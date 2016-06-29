@@ -17,9 +17,18 @@ queue is not used.
 
 Used for documentation of these queue configuration parameters.
 
-## 2. Hardware Default group
+## 2. Common Columns group
 
-### 2.1 hw_default column
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 2.1 external_ids column
+
+### 2.2 other_config column
+
+## 3. Hardware Default group
+
+### 3.1 hw_default column
 
 When true, this row contains the hardware default queue profile parameters for
 this queue.

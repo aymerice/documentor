@@ -72,20 +72,22 @@ owner of the entry. Example: If BGP created an entry BGP can populate these key-
 value pairs for its internal use. These values may not add value to other
 daemons
 
-### 2.1 protocol_specific : bgp_loc_pref key
+### 2.1 protocol_specific column
+
+### 2.2 protocol_specific : bgp_loc_pref key
 
 Local preference path attribute. Used by BGP to influence in the best path
 selectionUsed by BGP to influence in the best path selection..
 
-### 2.2 protocol_specific : bgp_origin key
+### 2.3 protocol_specific : bgp_origin key
 
 Indicates whether a route is `IGP`, `EGP` or `incomplete`.
 
-### 2.3 protocol_specific : bgp_flags key
+### 2.4 protocol_specific : bgp_flags key
 
 Route status flags. Allowed values are `history`, `damped`,`multipath`
 
-### 2.4 protocol_specific : bgp_as_path key
+### 2.5 protocol_specific : bgp_as_path key
 
 List of AS path number for a route. Example: 200,300,400
 

@@ -122,3 +122,7 @@ VLANs included in the CIST instance.
 
 The forward delay time value for this instance. Default value is 15.
 
+## 3. Ungrouped group
+
+### 3.1 max_hop_count column
+

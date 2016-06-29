@@ -4,3 +4,17 @@
 
 NTP Keys configuration
 
+## 1. Ungrouped group
+
+### 1.1 key_id column
+
+Specifies a key_id which is used for NTP authentication.
+
+### 1.2 trust_enable column
+
+Enables trust settings for this key_id. Default is false.
+
+### 1.3 key_password column
+
+Specifies a key_password which is used for NTP authentication.
+

@@ -41,24 +41,39 @@ Specifies the maximum time to hold onto restarting peer stale paths. Range:
 Enables fast external failover for BGP directly connected peering sessions.
 Default is false.
 
-### 1.8 timers : holdtime key
+### 1.8 timers column
+
+### 1.9 timers : holdtime key
 
 Specifies BGP hold time in seconds. Default is 180 seconds.
 
-### 1.9 timers : keepalive key
+### 1.10 timers : keepalive key
 
 Specifies BGP keepalive time in seconds. Default is 60 seconds.
 
-### 1.10 log_neighbor_changes column
+### 1.11 log_neighbor_changes column
 
 Enables logging of BGP neighbor status changes. Default is false.
 
-### 1.11 networks column
+### 1.12 networks column
 
 Announces networks for given bgp router.
 
-### 1.12 maximum_paths column
+### 1.13 maximum_paths column
 
 Number of paths BGP may install into the routing table. If not specified, BGP
 selects a single path. Default is 1.
+
+## 2. Status group
+
+### 2.1 status column
+
+## 3. Common Columns group
+
+The overall purpose of these columns is described under `Common Columns` at the
+beginning of this document.
+
+### 3.1 other_config column
+
+### 3.2 external_ids column
 

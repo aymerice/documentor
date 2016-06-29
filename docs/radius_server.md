@@ -5,3 +5,33 @@
 These radius servers are being used for authenticating when users wants to login
 to the box.
 
+## 1. Ungrouped group
+
+### 1.1 retries column
+
+Specifies the number of retries to radius server if there is no response.
+Default retry value is 1.
+
+### 1.2 passkey column
+
+Specifies the passkey between radius client and radius server for
+authentication. Default passkey is testing123-1.
+
+### 1.3 udp_port column
+
+Specifies the udp port number for authentication. Default udp port number for
+authentication is 1812.
+
+### 1.4 priority column
+
+Specifies the order in which radius servers are configured on the switch.
+
+### 1.5 timeout column
+
+Specifies the timeout between authentication requests to radius server. Default
+timeout is 5 seconds.
+
+### 1.6 ip_address column
+
+IP address of the radius server configured.
+

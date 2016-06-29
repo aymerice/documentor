@@ -4,3 +4,27 @@
 
 Each entry contains metadata related to package which is part of the image
 
+## 1. Ungrouped group
+
+### 1.1 src_type column
+
+Corresponds to the type of source pointed to by src_url. Depending on the
+src_url, some of the values it can take are - git, https, http, ftp, svn, cvs
+etc.
+
+### 1.2 src_url column
+
+This denotes the download location for the source-code of the package. For
+example: ops-openvswitch: https://git.openswitch.net/openswitch/ops-openvswitch
+sed: http://ftp.gnu.org/gnu/sed/sed-4.2.2.tar.gz
+
+### 1.3 name column
+
+Name of the package. Example: ops-openvswitch, sed, ops-quagga, openssh etc.
+
+### 1.4 version column
+
+If the src_type is a git repository, this will contain the git hash. Otherwise
+it will contain the version string (depending on the package). For example: ops-
+openvswitch: ac19ac49778adf6cf011a3ef6e0675025f1945b5 sed: 4.2.2
+

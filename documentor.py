@@ -24,6 +24,51 @@ import re
 from collections import OrderedDict
 
 
+def get_type(obj):
+    if isinstance(obj, (dict, OrderedDict)):
+        if 'type' in obj:
+            return get_type(obj['type'])
+        elif 'key' in obj:
+            return get_type(obj['key'])
+    elif isinstance(obj, basestring):
+        return obj
+    return 'unknown'
+
+
+def get_ref_table(obj):
+    if isinstance(obj, dict) and 'key' in obj and \
+       isinstance(obj['key'], dict) and 'refTable' in obj['key']:
+       return obj['key']['refTable']
+    return 'unknown'
+
+
+def get_ref_type(obj):
+    if isinstance(obj, dict):
+        if 'refType' in obj:
+            return obj['refType']
+        ref_type = 'strong'
+        for key, value in obj.iteritems():
+            temp = get_ref_type(value)
+            if temp != 'strong':
+                ref_type = temp
+        return ref_type
+    return 'strong'
+
+
+def get_value(obj):
+    if isinstance(obj, dict) and 'value' in obj:
+        return obj['value']
+    if isinstance(obj, dict) and 'valueType' in obj:
+        return obj['valueType']
+    return None
+
+
+def get_value_type(obj):
+    if isinstance(obj, dict) and ('value' in obj or 'valueType' in obj):
+        return get_type(get_value(obj))
+    return None
+
+
 class EmptyStringArray(object):
     def __getitem__(self, key):
         return ''
@@ -32,10 +77,14 @@ class EmptyStringArray(object):
 class DocSection:
     def __init__(self, title='', obj=None, link=None):
         self.title = title
-        if obj and isinstance(obj, dict) and 'doc' in obj:
+        if obj is not None and isinstance(obj, dict) and 'doc' in obj:
             self.text = obj['doc']
         else:
             self.text = []
+        if obj is not None and isinstance(obj, dict) and 'type' in obj:
+             self.sec_type = obj['type']
+        else:
+             self.sec_type = None
         self.subsections = []
         self.link = link
 
@@ -58,6 +107,26 @@ class DocSection:
         fd.write(title)
         if self.link is not None:
             fd.write('![%s_table_img](%s)\n\n' % (self.title,self.link))
+        if self.sec_type is not None:
+            ktype = get_type(self.sec_type)
+            vtype = get_value_type(self.sec_type)
+            ref_str = ''
+            if vtype is not None:
+                sec_type = ktype + '->' + vtype
+            else:
+                sec_type = ktype
+            if ktype == 'uuid':
+                ref_table = get_ref_table(self.sec_type)
+                ref_type = get_ref_type(self.sec_type)
+                ref_str += (' **refTable**: [%s](%s.html) **refType**: _%s_\n\n' %
+                            (ref_table, ref_table.lower(), ref_type))
+            if vtype == 'uuid':
+                value_type = get_value(self.sec_type)
+                ref_table = value_type['refTable']
+                ref_type = get_ref_type(value_type)
+                ref_str += (' **refTable**: [%s](%s.html) **refType**: _%s_\n\n' %
+                            (ref_table, ref_table.lower(), ref_type))
+            fd.write('**Type**: _%s_%s\n\n' % (sec_type, ref_str))
         for line in self.text:
             fd.write(line + '\n')
         if len(self.text) > 0:
@@ -92,10 +161,10 @@ class DocSection:
                 if len(parts) > 0:
                     new_link = parts[0].lower() + '.html'
                 if len(parts) == 2:
-                    new_link = new_link + '#' + clean(parts[1]) + '-column'
+                    new_link = new_link + '#' + clean(parts[1])
                 if len(parts) == 3:
                     new_link = new_link + '#' + clean(parts[1]) + \
-                               '-' + clean(parts[2]) + '-key'
+                               '-' + clean(parts[2])
                 # Reassembly the line with the new link
                 line = pre_link + new_link + post_link
                 index = line.find(ref_mark, index + len(ref_mark))
@@ -125,6 +194,8 @@ class DocSection:
         del ind[-1]
 
 
+
+
 class DocGroup:
     def __init__(self, title='', obj=None):
         self.section = DocSection(title, obj)
@@ -139,7 +210,7 @@ class DocGroup:
         current_group = self
         for group in groups:
             if group not in current_group.subgroups:
-                current_group.subgroups[group] = DocGroup(group + ' group')
+                current_group.subgroups[group] = DocGroup(group)
             current_group = current_group.subgroups[path]
 
     def get_group(self, path, schema):
@@ -152,7 +223,7 @@ class DocGroup:
             if group not in current_group.subgroups:
                 groups = schema['groups']
                 current_group.subgroups[group] = \
-                    DocGroup(group + ' group', groups.get(current_path))
+                    DocGroup(group, groups.get(current_path))
             current_group = current_group.subgroups[group]
         return current_group
 
@@ -177,7 +248,8 @@ class DocGroup:
         columns = table['columns']
         for column_name, column in columns.iteritems():
             #if 'doc' in column:
-            section = DocSection(column_name + ' column', column)
+            section = DocSection(column_name, column)
+            #section.sec_type = column['type']
             if 'group' in column:
                 group = column['group']
                 if isinstance(group, (str, unicode)):
@@ -192,7 +264,7 @@ class DocGroup:
             if 'valueMap' in col_type:
                 for key_name, key in col_type['valueMap'].iteritems():
                     section = DocSection(column_name + ' : ' +
-                                         key_name + ' key', key)
+                                         key_name, key)
                     if 'group' in key:
                         docgroup.add_to_group(key['group'], section, schema)
                     else:
@@ -409,6 +481,7 @@ class Diagram:
             ret += self._group_tables(self.tables, self.name, 3)
         ret += 'hide circle\n'
         ret += 'hide members\n'
+        ret += 'skinparam monochrome true\n'
         ret += 'legend right\n'
         ret += 'continuos line - <b>strong</b> reference\n'
         ret += 'dotted line - <i>weak</i> reference\n'

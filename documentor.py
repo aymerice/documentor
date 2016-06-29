@@ -14,11 +14,12 @@
 #  License for the specific language governing permissions and limitations
 #  under the License.
 
+
 import almost_base64
 import copy
 import json
 import re
-import zlib
+
 
 from collections import OrderedDict
 
@@ -55,7 +56,6 @@ class DocSection:
         title = ('#' * level + ' ' + self._indstr(ind) + self.title +
                  post[level] + '\n\n')
         fd.write(title)
-        #print self.title + ' = ' + str(self.link)
         if self.link is not None:
             fd.write('![%s_table_img](%s)\n\n' % (self.title,self.link))
         for line in self.text:
@@ -176,22 +176,27 @@ class DocGroup:
         docgroup = self
         columns = table['columns']
         for column_name, column in columns.iteritems():
-            if 'doc' in column:
-                section = DocSection(column_name + ' column', column)
-                if 'group' in column:
-                    group = column['group']
-                    if isinstance(group, (str, unicode)):
-                        docgroup.add_to_group(group, section, schema)
-                    else:
-                        for g in group:
-                            docgroup.add_to_group(g, section, schema)
+            #if 'doc' in column:
+            section = DocSection(column_name + ' column', column)
+            if 'group' in column:
+                group = column['group']
+                if isinstance(group, (str, unicode)):
+                    docgroup.add_to_group(group, section, schema)
+                else:
+                    for g in group:
+                        docgroup.add_to_group(g, section, schema)
+            else:
+                # Column does not belong to any group
+                docgroup.add_to_group('/' + table_name + '/Ungrouped', section, schema)
             col_type = column['type']
             if 'valueMap' in col_type:
                 for key_name, key in col_type['valueMap'].iteritems():
+                    section = DocSection(column_name + ' : ' +
+                                         key_name + ' key', key)
                     if 'group' in key:
-                        section = DocSection(column_name + ' : ' +
-                                             key_name + ' key', key)
                         docgroup.add_to_group(key['group'], section, schema)
+                    else:
+                        docgroup.add_to_group('/' + table_name + '/Ungrouped', section, schema)
 
     def from_schema(self, schema, path=[]):
         groups = schema['groups']
@@ -261,9 +266,11 @@ class TableDiagram:
         self.name = name
 
     def __str__(self):
-        return "class %s << (T,lightgreen) >>\n" % self.name
+        return "class %s\n" % self.name
 
     def __eq__(self, other):
+        if isinstance(other, (str, unicode)):
+            return self.name == other
         return self.name == other.name
 
     def __hash__(self):
@@ -272,9 +279,11 @@ class TableDiagram:
 
 class Diagram:
     def __init__(self, schema=None):
+        self.name = ''
         self.root_tables = set()
         self.tables = set()
         self.links = set() # Tuples of table names
+        self.weak_links = set() # Tuples of table names
         if schema is not None:
             self.from_schema(schema)
 
@@ -284,10 +293,11 @@ class Diagram:
     def add_root_table(self, table):
         self.root_tables.add(table)
 
-    def add_link(self, table_a, table_b):
-        self.links.add((table_a, table_b))
+    def add_link(self, table_a, table_b, link_type='strong'):
+        self.links.add((table_a, table_b, link_type))
 
     def from_schema(self, schema):
+        '''Builds a diagram from a schema.'''
         tables = schema['tables']
         for table_name, table in tables.iteritems():
             table_diag = TableDiagram(table_name)
@@ -300,9 +310,14 @@ class Diagram:
                 if isinstance(column['type'], dict) and \
                    isinstance(column['type']['key'], dict) and \
                    'refTable' in column['type']['key']:
-                   self.add_link(table_name, column['type']['key']['refTable'])
+                   if 'refType' in column['type']['key'] and \
+                      column['type']['key']['refType'] == 'weak':
+                      self.add_link(table_name, column['type']['key']['refTable'], 'weak')
+                   else:
+                      self.add_link(table_name, column['type']['key']['refTable'])
 
     def from_table(self, table_name, table):
+        '''Builds a diagram from a table.'''
         table_diag = TableDiagram(table_name)
         self.add_table(table_diag)
         columns = table['columns']
@@ -315,15 +330,21 @@ class Diagram:
                self.add_link(table_name, other_table_name)
 
     def focus_on(self, table_name):
+        '''Return a Diagram that focus on the given table.
+
+        All tables and links not related to the focused table are deleted from
+        the returned diagram.
+        '''
         diag = Diagram()
+        diag.name = table_name
         valid_tables = set()
         valid_tables.add(table_name)
         # Copy relevant links
-        for ta, tb in self.links:
+        for ta, tb, link_type in self.links:
             if ta == table_name or tb == table_name:
                 valid_tables.add(ta)
                 valid_tables.add(tb)
-                diag.links.add((ta,tb))
+                diag.add_link(ta, tb, link_type)
         # Copy relevant root tables
         for table in self.root_tables:
             if table.name in valid_tables:
@@ -334,23 +355,69 @@ class Diagram:
                 diag.tables.add(table)
         return diag
 
+    def _group_tables(self, tables, name, n):
+        '''Groups tables togueter using invisible links
+
+        tables - set of tables
+        name - a table's name to ignore
+        n - elements per group
+        '''
+        t = tables.copy()
+        ret = ''
+        while len(t) >= n:
+            g = []
+            for i in range(n):
+                table = t.pop()
+                if table == name:
+                    table = t.pop()
+                g.append(table)
+            for i in range(n):
+                if i < n-1:
+                    ret += '%s -[hidden]- %s\n' % (g[i].name, g[i+1].name)
+                else:
+                    ret += '%s -[hidden]- %s\n' % (g[i].name, g[0].name)
+        return ret
+
     def __str__(self):
         ret = '@startuml\n'
         if len(self.root_tables) > 0:
             ret += 'package "Root Tables" {\n'
             for table in self.root_tables:
-                ret += '    ' + str(table)
+                ret += str(table)
             ret += '}\n'
-        for table in self.tables:
-            ret += str(table)
-        #ret += '\n'
-        for ta, tb in self.links:
-            ret += ta + ' --> ' + tb + '\n'
-        #ret += '\n'
-        ret += '@enduml'
+        if len(self.tables) > 0:
+            ret += 'together {\n'
+            for table in self.tables:
+                ret += str(table)
+            ret += '}\n'
+        for ta, tb, link_type in self.links:
+            link = ' -%s-> '
+            pos, no_pos = 'd', 'u'
+            if tb == self.name:
+                ta, tb = tb, ta
+                pos, no_pos = no_pos, pos
+                link = ' <-%s- '
+            if tb in self.root_tables:
+                  pos, no_pos = no_pos, pos
+            if link_type == 'weak':
+                link = link.replace('-', '.')
+            ret += ta + (link % pos) + tb + '\n'
+        # Group tables when there are too many
+        if len(self.root_tables) >= 8:
+            ret += self._group_tables(self.root_tables, self.name, 3)
+        if len(self.tables) >= 8:
+            ret += self._group_tables(self.tables, self.name, 3)
+        ret += 'hide circle\n'
+        ret += 'hide members\n'
+        ret += 'legend right\n'
+        ret += 'continuos line - <b>strong</b> reference\n'
+        ret += 'dotted line - <i>weak</i> reference\n'
+        ret += 'endlegend\n'
+        ret += '@enduml\n'
         return ret
 
     def get_link(self):
+        '''Return an URL to this diagram.'''
         enc = almost_base64.deflate_and_encode(str(self))
         return 'http://www.plantuml.com/plantuml/img/' + enc
 
@@ -375,7 +442,7 @@ def main():
     save_tables(doc)
 
     # diag = Diagram(schema)
-    # cdiag = diag.focus_on('Bridge')
+    # cdiag = diag.focus_on('System')
     # print cdiag
     # img = almost_base64.deflate_and_encode(str(cdiag))
     # print 'http://www.plantuml.com/plantuml/img/' + img

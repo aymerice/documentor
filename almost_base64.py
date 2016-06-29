@@ -64,6 +64,12 @@ def encode(data):
             r += _append3bytes(data[i], data[i+1], data[i+2])
     return r
 
+def deflate(data):
+    zobj = zlib.compressobj(0, zlib.DEFLATED,-zlib.MAX_WBITS,
+                            zlib.DEF_MEM_LEVEL, 0)
+    zdata = zobj.compress(data)
+    zdata += zobj.flush()
+    return zdata
 
 def deflate_and_encode(string_val):
     ''' Compress a string to use with PlantUML image generation servers.
@@ -71,8 +77,6 @@ def deflate_and_encode(string_val):
     Code adapted from http://plantuml.com/codejavascript2.html
     '''
     # Compress with zlib
-    zlibbed_str = zlib.compress(string_val)
-    # Remove zlib header and checksum, leaves only deflate stream
-    compressed_string = zlibbed_str[2:-4]
+    compressed_string = deflate(string_val)
     # Encode with almost base64
     return encode(compressed_string)

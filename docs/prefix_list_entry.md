@@ -1,25 +1,37 @@
 # Prefix_List_Entry
 
-![Prefix_List_Entry_table_img](http://www.plantuml.com/plantuml/img/0RG0I_z0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1GScLcQNXVJ6bpT5z5RdHoUGfz2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfiPMTbRcGWScbdQ7GAOszkT6bkTMzp86nfRcKWBI0yOZvpT79lRcSyBs8-879bPcLoPMvZPGfaRtHqPMGWR6bkPI0j83nfFdTbOMiyBsa-879bPcLoPMvZPGfbRcHiPMTbRcGAG6LkP7LjR0e0)
+![Prefix_List_Entry_table_img](http://www.plantuml.com/plantuml/img/0Su0CVz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1GScLcQNXVJ6bpT5z5RdHoUGfz2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfpQsbkS65oOMqWRMzkRsDeSczjPI1qSdLb2cnbPsLkP21oQMTeT0fZRsvqQMvrRtCWR6bkPI0j83nYFdDqSczkPpmlOZuWScLcPN9bRcDb2cHlT7HbP21iQMvb82qWF6a-TsLXQpmlQJuWScLcPN9bRcDb2cLkP6nbPsLkP0f0PMvaTMri)
 
-## 1. Global Prefix List Entries Configuration group
+## 1. Global Prefix List Entries Configuration
 
-### 1.1 le column
+### 1.1 le
 
-### 1.2 ge column
+**Type**: _integer_
 
-### 1.3 prefix column
+### 1.2 ge
 
-### 1.4 action column
+**Type**: _integer_
+
+### 1.3 prefix
+
+**Type**: _string_
+
+### 1.4 action
+
+**Type**: _string_
 
 There are three types, permit, deny, and any.
 
-## 2. Common Columns group
+## 2. Common Columns
 
 The overall purpose of these columns is described under `Common Columns` at the
 beginning of this document.
 
-### 2.1 other_config column
+### 2.1 other_config
 
-### 2.2 external_ids column
+**Type**: _string->string_
+
+### 2.2 external_ids
+
+**Type**: _string->string_
 

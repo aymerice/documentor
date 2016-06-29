@@ -1,31 +1,47 @@
 # Fan
 
-![Fan_table_img](http://www.plantuml.com/plantuml/img/0Sa0Dlz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1JTM9pUNDqPMqAOsnXStCWHc5k2dqAHc5k83mjTIqWKtLYStbpT6Lj2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfiPMTbRcGWScbdQ7GAOszkT6bkTMzp86nfRcKWBI0yOZvpT79lRcSyBs8-879bPcLoPMvZPGfaRtHqPMGWR6bkPI0j83nfFdTbOMiyBsa-879bPcLoPMvZPGfbRcHiPMTbRcGAG6LkP7LjR0e0)
+![Fan_table_img](http://www.plantuml.com/plantuml/img/0UC07Fz0StHXSdHrRMmAT6zdPNHePN8WUmfZR65pSo1JTM9pUNDqPMqAOsnXStCWHc5k2dqAHc5k83mjTIqWKtLYStbpT6Lj2cXfP6KWOsboOsnb2cXfP6KWRMLjOcLoSmfpQsbkS65oOMqWRMzkRsDeSczjPI1qSdLb2cnbPsLkP21oQMTeT0fZRsvqQMvrRtCWR6bkPI0j83nYFdDqSczkPpmlOZuWScLcPN9bRcDb2cHlT7HbP21iQMvb82qWF6a-TsLXQpmlQJuWScLcPN9bRcDb2cLkP6nbPsLkP0f0PMvaTMri)
 
-## 1. Status group
+## 1. Status
 
-### 1.1 status column
+### 1.1 status
 
-### 1.2 direction column
+**Type**: _string_
 
-### 1.3 rpm column
+### 1.2 direction
 
-### 1.4 speed column
+**Type**: _string_
 
-## 2. Core Features group
+### 1.3 rpm
 
-### 2.1 name column
+**Type**: _integer_
 
-## 3. Common Columns group
+### 1.4 speed
+
+**Type**: _string_
+
+## 2. Core Features
+
+### 2.1 name
+
+**Type**: _string_
+
+## 3. Common Columns
 
 The overall purpose of these columns is described under `Common Columns` at the
 beginning of this document.
 
-### 3.1 other_config column
+### 3.1 other_config
 
-### 3.2 external_ids column
+**Type**: _string->string_
 
-## 4. Ungrouped group
+### 3.2 external_ids
 
-### 4.1 hw_config column
+**Type**: _string->string_
+
+## 4. Ungrouped
+
+### 4.1 hw_config
+
+**Type**: _string->string_
 

@@ -1,11 +1,11 @@
 # Port
 
-![Port_table_img](http://www.plantuml.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)
+![Port_table_img](http://www.plantuml.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)
 
 A port within a [Bridge](bridge.html).
 
 Most commonly, a port has exactly one ``interface,'' pointed to by its
-[interfaces](port.html#interfaces-column) column.  Such a port logically corresponds to a
+[interfaces](port.html#interfaces) column.  Such a port logically corresponds to a
 port on a physical Ethernet switch.  A port with more than one interface is a
 ''bonded port'' (see [Bonding Configuration] (Bonding Configuration)).
 
@@ -17,73 +17,99 @@ Unless referenced interface has an "internal" type, L3 port can not participate
 in the bridge. "internal" ports that basically represent VLAN interfaces may be
 referenced by both Bridge and VRF.
 
-## 1. Other Features group
+## 1. Other Features
 
-### 1.1 egress_redirect_to_port column
+### 1.1 egress_redirect_to_port
+
+**Type**: _uuid_ **refTable**: [Port](port.html) **refType**: _weak_
+
+
 
 When set, egress traffic of this port will be redirected to the referenced port.
 
-### 1.2 flood_block column
+### 1.2 flood_block
+
+**Type**: _boolean_
 
 When set to &#8216;true&#8217;, all flood traffic received from and forwarded to
 this port will be dropped. The default value is `false`.
 
-### 1.3 egress_blocked_to_ports column
+### 1.3 egress_blocked_to_ports
+
+**Type**: _uuid_ **refTable**: [Port](port.html) **refType**: _weak_
+
+
 
 When set, all traffic which ingresses this port will be blocked from being
 forwarded out of the specified ports.
 
-### 1.4 mac_learn_disable column
+### 1.4 mac_learn_disable
+
+**Type**: _boolean_
 
 When set to 'true', mac learning will be disabled on the port. The default value
 is `false`.
 
-### 1.5 other_config column
+### 1.5 other_config
 
-### 1.6 other_config : proxy_arp_enabled key
+**Type**: _string->string_
+
+### 1.6 other_config : proxy_arp_enabled
+
+**Type**: _boolean_
 
 Enables proxy ARP feature on the port. Default is false. Port should be part of
 VRF in order for the feature to be active.
 
-### 1.7 other_config : local_proxy_arp_enabled key
+### 1.7 other_config : local_proxy_arp_enabled
+
+**Type**: _boolean_
 
 Enables local proxy ARP feature on the port. Default is false. Port should be
 part of VRF in order for the feature to be active.
 
-### 1.8 other_config : sflow-enabled key
+### 1.8 other_config : sflow-enabled
+
+**Type**: _boolean_
 
 Determines whether sflow sampling is enabled on this port. Default is true.
 
-### 1.9 mac column
+### 1.9 mac
+
+**Type**: _string_
 
 The MAC address to use for this port for the purpose of choosing the bridge's
 MAC address.  This column does not necessarily reflect the port's actual MAC
 address, nor will setting it change the port's actual MAC address.
 
-### 1.10 mclag_remote_interfaces column
+### 1.10 mclag_remote_interfaces
+
+**Type**: _uuid_ **refTable**: [MCLAG_Remote_Interface](mclag_remote_interface.html) **refType**: _strong_
+
+
 
 List of interfaces on the MCLAG peer device which are part of same LAG.
 [MCLAG_Remote_Interface](mclag_remote_interface.html)
 
-## 2. VLAN Configuration group
+## 2. VLAN Configuration
 
 Bridge ports support the following types of VLAN configuration:
 
 + __trunk__:    A trunk port carries packets on one or more VLANs specified in
-the [trunks](port.html#trunks-column) column (or all VLANs defined in [VLAN](vlan.html) table if
+the [trunks](port.html#trunks) column (or all VLANs defined in [VLAN](vlan.html) table if
 trunks is empty or not specified). A packet that ingresses on a trunk port is in
 the VLAN specified in its 802.1Q header, or VLAN 1 if the packet has no 802.1Q
 header.  A packet that egresses through a trunk port will have an 802.1Q header
 if it has a nonzero VLAN ID.    Any packet that ingresses on a trunk port tagged
 with a VLAN that the port does not trunk is dropped.
 + __access__:    An access port carries packets on exactly one VLAN specified in
-the [tag](port.html#tag-column) column.  Packets egressing on an access port have no 802.1Q
+the [tag](port.html#tag) column.  Packets egressing on an access port have no 802.1Q
 header.    Any packet with an 802.1Q header with a nonzero VLAN ID that
 ingresses on an access port is dropped, regardless of whether the VLAN ID in the
 header is the access port's VLAN ID.
 + __native-tagged__:   A native-tagged port resembles a trunk port, with the
 exception that a packet without an 802.1Q header that ingresses on a native-
-tagged port is in the ``native VLAN'' (specified in the [tag](port.html#tag-column) column).
+tagged port is in the ``native VLAN'' (specified in the [tag](port.html#tag) column).
 + __native-untagged__:   A native-untagged port resembles a native-tagged port,
 with the exception that a packet that egresses on a native-untagged port in the
 native VLAN will not have an 802.1Q header.
@@ -91,59 +117,81 @@ native VLAN will not have an 802.1Q header.
 A packet will only egress through bridge ports that carry the VLAN of the
 packet, as described by the rules above.
 
-### 2.1 trunks column
+### 2.1 trunks
+
+**Type**: _integer_
 
 For a trunk, native-tagged, or native-untagged port, the 802.1Q VLAN or VLANs
 that this port trunks; if it is empty, then the port trunks all VLANs defined in
 the [VLAN](vlan.html) table.  Must be empty if this is an access port.
 
 A native-tagged or native-untagged port always trunks its native VLAN,
-regardless of whether [trunks](port.html#trunks-column) includes that VLAN.
+regardless of whether [trunks](port.html#trunks) includes that VLAN.
 
-### 2.2 tag column
+### 2.2 tag
+
+**Type**: _integer_
 
 For an access port, the port's implicitly tagged VLAN.  For a native-tagged or
 native-untagged port, the port's native VLAN.  Must be empty if this is a trunk
 port.
 
-### 2.3 vlan_mode column
+### 2.3 vlan_mode
+
+**Type**: _string_
 
 The VLAN mode of the port, as described above.  When this column is empty, a
 default mode is selected as follows:
 
-+ If [tag](port.html#tag-column) contains a value, the port is an access port.  The
-[trunks](port.html#trunks-column) column should be empty.
-+ Otherwise, the port is a trunk port.  The [trunks](port.html#trunks-column) column value
++ If [tag](port.html#tag) contains a value, the port is an access port.  The
+[trunks](port.html#trunks) column should be empty.
++ Otherwise, the port is a trunk port.  The [trunks](port.html#trunks) column value
 is honored if it is present.
 
-### 2.4 vlan_tunnel_keys column
+### 2.4 vlan_tunnel_keys
+
+**Type**: _integer->uuid_ **refTable**: [Logical_Switch](logical_switch.html) **refType**: _weak_
+
+
 
 Specifies translation from a vlan to the [Logical_Switch](logical_switch.html). If
 this is an access port, only one key needs to be specified. VLAN 0 means that
 untagged traffic on the port is mapped to the specified logical switch.
 
-## 3. QoS configuration group
+## 3. QoS configuration
 
 Specifies QoS (Quality of Service) port configuration options.
 
-### 3.1 qos column
+### 3.1 qos
+
+**Type**: _uuid_ **refTable**: [QoS](qos.html) **refType**: _strong_
+
+
 
 References schedule profile for this port. If this is unspecified, then the
 schedule profile referenced in [System](system.html)) table qos will be used.
 
-### 3.2 qos_config column
+### 3.2 qos_config
 
-### 3.3 qos_config : cos_override key
+**Type**: _string->string_
+
+### 3.3 qos_config : cos_override
+
+**Type**: _integer_
 
 Specifies the port COS override to use. If the key is not specified, then no
 override will be enabled.
 
-### 3.4 qos_config : dscp_override key
+### 3.4 qos_config : dscp_override
+
+**Type**: _integer_
 
 Specifies the port DSCP override to use. If the key is not specified, then no
 override will be enabled.
 
-### 3.5 qos_config : qos_trust key
+### 3.5 qos_config : qos_trust
+
+**Type**: _string_
 
 Specifies the individual port QoS Trust Mode.
 
@@ -164,69 +212,95 @@ non-IP packets, what meta-data values are assigned is hardware dependent.
 If the key is not specified, then the qos_trust value in the [System](system.html)
 table will be used.
 
-### 3.6 q_profile column
+### 3.6 q_profile
+
+**Type**: _uuid_ **refTable**: [Q_Profile](q_profile.html) **refType**: _strong_
+
+
 
 References queue profile for this port. If this is unspecified, then the queue
 profile referenced in [System](system.html)) table q_profile will be used.
 
-## 4. L3 Configuration group
+## 4. L3 Configuration
 
-### 4.1 ip4_address_secondary column
+### 4.1 ip4_address_secondary
+
+**Type**: _string_
 
 This is a list of secondary IPv4 addresses and subnet mask in the address/mask
 format.
 
-### 4.2 ip6_address column
+### 4.2 ip6_address
+
+**Type**: _string_
 
 The IPv6 address and subnet mask in the address/mask format. This is the primary
 IPv6 address.
 
-### 4.3 ip6_address_secondary column
+### 4.3 ip6_address_secondary
+
+**Type**: _string_
 
 This is a list of secondary IPv6 addresses and subnet mask in the address/mask
 format.
 
-### 4.4 ip4_address column
+### 4.4 ip4_address
+
+**Type**: _string_
 
 The IPv4 address and subnet mask in the address/mask format. This is the primary
 IP address.
 
-### 4.5 Port level OSPFv2 Configurations group
+### 4.5 Port level OSPFv2 Configurations
 
 The "Port" level OSPFv2 Routing Configurations.
 
-#### 4.5.1 ospf_if_out_cost column
+#### 4.5.1 ospf_if_out_cost
+
+**Type**: _integer_
 
 The output cost assigned to the corresponding OSPFv2 interface. The default
 value depends on the interface bandwidth and on the auto-cost reference
 bandwidth.
 
-#### 4.5.2 ospf_auth_text_key column
+#### 4.5.2 ospf_auth_text_key
+
+**Type**: _string_
 
 The authentication key for OSPFv2 authentication type "text".
 
-#### 4.5.3 ospf_intervals column
+#### 4.5.3 ospf_intervals
 
-#### 4.5.4 ospf_intervals : retransmit_interval key
+**Type**: _string->integer_
+
+#### 4.5.4 ospf_intervals : retransmit_interval
+
+**Type**: _integer_
 
 The number of seconds between LSA retransmissions. It is also used when
 retransmitting Database Description and Link State Request Packets. The default
 value is 5 seconds.
 
-#### 4.5.5 ospf_intervals : dead_interval key
+#### 4.5.5 ospf_intervals : dead_interval
+
+**Type**: _integer_
 
 The time duration, in seconds, that a neighbor should wait for a Hello packet
 before tearing down adjacencies with the local router. The dead_interval must be
 equal to or in multiples of the hello_interval. The default value is 4 times
 hello_interval seconds.
 
-#### 4.5.6 ospf_intervals : hello_interval key
+#### 4.5.6 ospf_intervals : hello_interval
+
+**Type**: _integer_
 
 The Hello packet will be sent every hello_interval timer value seconds. This
 value must be the same for all routers attached to a common network. The default
 value is 10 seconds.
 
-#### 4.5.7 ospf_intervals : transmit_delay key
+#### 4.5.7 ospf_intervals : transmit_delay
+
+**Type**: _integer_
 
 The estimated time in seconds to transmit an LSA to a neighbor. The
 transmit_delay timer increments the age of LSAs in the update packets to
@@ -234,260 +308,376 @@ accommodate transmission and propagation delays for the interface. The timer is
 more important on very low speed links where the transmission delay is more
 significant. The default value is 1 second.
 
-#### 4.5.8 ospf_priority column
+#### 4.5.8 ospf_priority
+
+**Type**: _integer_
 
 The router with the highest priority will be more eligible to become Designated
 Router. Setting the value to 0, makes the router ineligible to become Designated
 Router. The default value is 1.
 
-#### 4.5.9 ospf_auth_type column
+#### 4.5.9 ospf_auth_type
+
+**Type**: _string_
 
 The type of OSPFv2 authentication. If not set, then parent area level
 authentication holds for the port.
 
-#### 4.5.10 ospf_if_type column
+#### 4.5.10 ospf_if_type
+
+**Type**: _string_
 
 The type of the OSPFv2 network interface. The default value is the type of the
 interface from the Interface table.
 
-#### 4.5.11 ospf_mtu_ignore column
+#### 4.5.11 ospf_mtu_ignore
+
+**Type**: _boolean_
 
 This determines if OSPFv2 should ignore any IP MTU mismatch with a neighbor or
 not. The default value is false, that is not to establish adjacency if the
 neighbor MTU does not match the local interface MTU.
 
-#### 4.5.12 ospf_auth_md5_keys column
+#### 4.5.12 ospf_auth_md5_keys
+
+**Type**: _integer->string_
 
 The authentication keys for OSPFv2 authentication type "md5".
 
-## 5. ACL Configuration group
+## 5. ACL Configuration
 
 ACL applied to ports.
 
-### 5.1 aclv4_in_cfg column
+### 5.1 aclv4_in_cfg
+
+**Type**: _uuid_ **refTable**: [ACL](acl.html) **refType**: _weak_
+
+
 
 ACL, potentially in flight, desired to be applied to this port, as identified in
 the [ACL](acl.html).
 
-### 5.2 aclv4_in_statistics_clear_requested column
+### 5.2 aclv4_in_statistics_clear_requested
+
+**Type**: _integer_
 
 The number of times a request was made to clear the ACL statistics for this
 port.
 
-### 5.3 aclv4_in_cfg_version column
+### 5.3 aclv4_in_cfg_version
+
+**Type**: _integer_
 
 The version of the 'aclv4_in_cfg' column. This value is incremented by the
 management interface - CLI/REST/Web UI, etc. every time it changes the
 'aclv4_in_cfg' value. An empty value means no ACL has been configured for the
 port.
 
-## 6. ACL Status group
+## 6. ACL Status
 
 Status of applied ACLs and ACLs statistics per port.
 
-### 6.1 aclv4_in_status column
+### 6.1 aclv4_in_status
+
+**Type**: _string->string_
 
 The status of the last version of 'aclv4_in_cfg' column, that has been processed
 by switchd.
 
-### 6.2 aclv4_in_status : state key
+### 6.2 aclv4_in_status : state
 
-### 6.3 aclv4_in_status : code key
+**Type**: _string_
+
+### 6.3 aclv4_in_status : code
+
+**Type**: _integer_
 
 Numeric error code.  Expected to be 0 when state is 'applied'
 
-### 6.4 aclv4_in_status : message key
+### 6.4 aclv4_in_status : message
+
+**Type**: _string_
 
 Detailed reason for error state.  Expected empty when state is 'applied'
 
-### 6.5 aclv4_in_status : version key
+### 6.5 aclv4_in_status : version
+
+**Type**: _integer_
 
 The version of aclv4_in_cfg that corresponds to this status.
 
-### 6.6 aclv4_in_statistics_clear_performed column
+### 6.6 aclv4_in_statistics_clear_performed
+
+**Type**: _integer_
 
 The number of times the ACL statistics for this port have been cleared.
 
-### 6.7 aclv4_in_applied column
+### 6.7 aclv4_in_applied
+
+**Type**: _uuid_ **refTable**: [ACL](acl.html) **refType**: _weak_
+
+
 
 Current, successfully applied ACL to this port, as identified in the [ACL](acl.html)
 
-### 6.8 aclv4_in_statistics column
+### 6.8 aclv4_in_statistics
 
-### 6.9 aclv4_in_statistics : sequence_number key
+**Type**: _integer->integer_
+
+### 6.9 aclv4_in_statistics : sequence_number
+
+**Type**: _integer_
 
 Statistics for the ACL applied to this port for ACEs that have the 'count'
 keyword specified.  Statistics are key/value pairs of ACL sequence number and
 integer representing the statistics for that entry.
 
-## 7. Ungrouped group
+## 7. Ungrouped
 
-### 7.1 bond_options column
+### 7.1 bond_options
 
-### 7.2 kernel_interface_ready column
+**Type**: _string->string_
+
+### 7.2 kernel_interface_ready
+
+**Type**: _boolean_
 
 Indicates whether kernel interface is provisioned for the port. Default is
 false.
 
-### 7.3 loop_protect_vlan column
+### 7.3 loop_protect_vlan
 
-### 7.4 bond_active_slave column
+**Type**: _uuid_ **refTable**: [VLAN](vlan.html) **refType**: _weak_
 
-### 7.5 vlan_options column
 
-### 7.6 interfaces column
+
+### 7.4 bond_active_slave
+
+**Type**: _string_
+
+### 7.5 vlan_options
+
+**Type**: _string->string_
+
+### 7.6 interfaces
+
+**Type**: _uuid_ **refTable**: [Interface](interface.html) **refType**: _strong_
+
+
 
 The port's interfaces.  If there is more than one, this is a bonded Port. A
 maximum of 8 interfaces can be assigned to a port.
 
-### 7.7 statistics column
+### 7.7 statistics
 
-### 7.8 name column
+**Type**: _string->integer_
+
+### 7.8 name
+
+**Type**: _string_
 
 Port name.  Should be alphanumeric and no more than about 8 bytes long.  May be
 the same as the interface name, for non-bonded ports.  Must otherwise be unique
 among the names of ports, interfaces, and bridges on a host.
 
-### 7.9 admin column
+### 7.9 admin
+
+**Type**: _string_
 
 The administrative state of the Port configured by user. The port admin state
 determines the hardware configuration based on the business logic. When port
 "admin" is configured down the interface(s) associated with the port should
 force their hardware configuration to down. By default the port is up.
 
-## 8. DHCP-Relay Statistics group
+## 8. DHCP-Relay Statistics
 
 DHCP-Relay statistics counters for both IPv4 and IPv6. The update period is
-controlled by [stats-update-interval](system.html#other-config-stats-update-interval-key)in
+controlled by [stats-update-interval](system.html#other-config-stats-update-interval)in
 [System](system.html). If certain key is missing, then the assummed counter value is
 0.
 
-### 8.1 dhcp_relay_statistics column
+### 8.1 dhcp_relay_statistics
 
-### 8.2 dhcp_relay_statistics : valid_v4server_responses_with_option82 key
+**Type**: _string->integer_
+
+### 8.2 dhcp_relay_statistics : valid_v4server_responses_with_option82
+
+**Type**: _integer_
 
 Number of valid IPv4 DHCP relay responses with option 82 processed.
 
-### 8.3 dhcp_relay_statistics : dropped_v4server_responses_with_option82 key
+### 8.3 dhcp_relay_statistics : dropped_v4server_responses_with_option82
+
+**Type**: _integer_
 
 Number of IPv4 DHCP relay responses with option 82 dropped.
 
-### 8.4 dhcp_relay_statistics : dropped_v4server_responses key
+### 8.4 dhcp_relay_statistics : dropped_v4server_responses
+
+**Type**: _integer_
 
 Number of IPv4 DHCP relay responses dropped.
 
-### 8.5 dhcp_relay_statistics : dropped_v6client_requests key
+### 8.5 dhcp_relay_statistics : dropped_v6client_requests
+
+**Type**: _integer_
 
 Number of IPv6 DHCP relay requests dropped.
 
-### 8.6 dhcp_relay_statistics : valid_v6client_requests key
+### 8.6 dhcp_relay_statistics : valid_v6client_requests
+
+**Type**: _integer_
 
 Number of valid IPv6 DHCP relay requests processed.
 
-### 8.7 dhcp_relay_statistics : dropped_v4client_requests_with_option82 key
+### 8.7 dhcp_relay_statistics : dropped_v4client_requests_with_option82
+
+**Type**: _integer_
 
 Number of IPv4 DHCP relay requests with option 82 dropped.
 
-### 8.8 dhcp_relay_statistics : valid_v6server_responses key
+### 8.8 dhcp_relay_statistics : valid_v6server_responses
+
+**Type**: _integer_
 
 Number of valid IPv6 DHCP relay responses processed.
 
-### 8.9 dhcp_relay_statistics : dropped_v4client_requests key
+### 8.9 dhcp_relay_statistics : dropped_v4client_requests
+
+**Type**: _integer_
 
 Number of IPv4 DHCP relay requests dropped.
 
-### 8.10 dhcp_relay_statistics : valid_v4client_requests_with_option82 key
+### 8.10 dhcp_relay_statistics : valid_v4client_requests_with_option82
+
+**Type**: _integer_
 
 Number of valid IPv4 DHCP relay requests with option 82 processed.
 
-### 8.11 dhcp_relay_statistics : valid_v4client_requests key
+### 8.11 dhcp_relay_statistics : valid_v4client_requests
+
+**Type**: _integer_
 
 Number of valid IPv4 DHCP relay requests processed.
 
-### 8.12 dhcp_relay_statistics : valid_v4server_responses key
+### 8.12 dhcp_relay_statistics : valid_v4server_responses
+
+**Type**: _integer_
 
 Number of valid IPv4 DHCP relay responses processed.
 
-### 8.13 dhcp_relay_statistics : dropped_v6server_responses key
+### 8.13 dhcp_relay_statistics : dropped_v6server_responses
+
+**Type**: _integer_
 
 Number of IPv6 DHCP relay responses dropped.
 
-## 9. Loop-protect Status group
+## 9. Loop-protect Status
 
-### 9.1 loop_protect_status column
+### 9.1 loop_protect_status
 
-### 9.2 loop_protect_status : last_loop_detected_time key
+**Type**: _string->string_
+
+### 9.2 loop_protect_status : last_loop_detected_time
+
+**Type**: _string_
 
 This has the last timestamp as integer containing epoch time,when the loop was
 detected by the Loop-protect feature.
 
-### 9.3 loop_protect_status : detected_on_vlan key
+### 9.3 loop_protect_status : detected_on_vlan
+
+**Type**: _string_
 
 This contains the VLAN on which the loop is detected.
 
-### 9.4 loop_protect_port_disabled column
+### 9.4 loop_protect_port_disabled
+
+**Type**: _boolean_
 
 This value will be set to `true`,if the port is disabled by Loop-protect.
 Default value is `false`.
 
-## 10. Port Status group
+## 10. Port Status
 
 Status information about ports attached to bridges.
 
-### 10.1 status column
+### 10.1 status
+
+**Type**: _string->string_
 
 Key-value pairs that report port status.
 
-### 10.2 status : bond_hw_handle key
+### 10.2 status : bond_hw_handle
+
+**Type**: _string_
 
 Unique identifier of the LAG from the data path's perspective. This key value
 should be treated as opaque handle by application daemons while updating LAG
 member interfaces in hardware.
 
-### 10.3 status : kernel_interface_error key
+### 10.3 status : kernel_interface_error
+
+**Type**: _string_
 
 Human readable kernel interface provisioning error description.
 
-### 10.4 status : error key
+### 10.4 status : error
+
+**Type**: _string_
 
 Human readable error description.
 
-### 10.5 lacp_status column
+### 10.5 lacp_status
+
+**Type**: _string->string_
 
 Key-value pairs that report lacp-specific port status.
 
-### 10.6 lacp_status : bond_speed key
+### 10.6 lacp_status : bond_speed
+
+**Type**: _string_
 
 Speed of interfaces operating in lag.
 
-### 10.7 lacp_status : bond_status_reason key
+### 10.7 lacp_status : bond_status_reason
+
+**Type**: _string_
 
 String identifying the reason why the bond_status is "down".
 
-### 10.8 lacp_status : bond_status key
+### 10.8 lacp_status : bond_status
+
+**Type**: _string_
 
 Operational status of LAG. The values are "ok" (bond is functional) "down" (bond
 isn't functional), and "defaulted" (remote LACP not operating, using one
 interface in non-LACP mode).
 
-### 10.9 bond_status column
+### 10.9 bond_status
+
+**Type**: _string->string_
 
 Key-value pairs that report bond-specific port status (both static and dynamic).
-This column complements the [lacp_status](port.html#lacp-status-column) column.
+This column complements the [lacp_status](port.html#lacp-status) column.
 
-### 10.10 bond_status : state key
+### 10.10 bond_status : state
+
+**Type**: _string_
 
 Enumeration summarizing the fowarding state of the bond.  It is based on the
 aggregate state of the individual member interfaces. * Up: At least one member
 interface is eligible and should be fowarding traffic according to LACP *
 Blocked:  All member interfaces are either not eligible or should be blocked
 according to LACP. If LACP-fallback-ab is enabled, and the
-[lacp_status](port.html#lacp-status-column) is defaulted, then the bond state is forwarding.
+[lacp_status](port.html#lacp-status) is defaulted, then the bond state is forwarding.
 If the LACP-fallback-ab is disable, then the state is blocked. * Down:  All
 member interfaces configured to be a member of a LAG are either administratively
 or operatively down
 
-### 10.11 forwarding_state column
+### 10.11 forwarding_state
+
+**Type**: _string->string_
 
 The Port's forwarding state is determined by the state of the interface or
 interfaces in case of LAG and by the information provided by protocols working
@@ -497,30 +687,40 @@ The value is set after all possible conditions have been taken into account.
 The conditions are evaluated by an arbiter that takes the decision of which
 value to set on the forwarding state based on protocol state.
 
-### 10.12 forwarding_state : port_aggregation_blocked_reason key
+### 10.12 forwarding_state : port_aggregation_blocked_reason
+
+**Type**: _string_
 
 Enumeration that identifies the asserting protocol that causes the port
 aggregation different from "forwarding". * lacp: This means that the aggregated
 state of the interfaces is driving the forwarding state of the Port, for
 example, all interfaces are blocked by a lacp.
 
-### 10.13 forwarding_state : forwarding key
+### 10.13 forwarding_state : forwarding
+
+**Type**: _boolean_
 
 Enumeration that summarizes the state of the interface.  This value drives the
 forwarding state of the data path. Default value is `false`.
 
-### 10.14 forwarding_state : port_loop_protection_blocked_reason key
+### 10.14 forwarding_state : port_loop_protection_blocked_reason
+
+**Type**: _string_
 
 Enumeration that identifies the asserting protocol that causes the port loop
 protection to be blocked.
 
-### 10.15 forwarding_state : port_loop_protection_forwarding key
+### 10.15 forwarding_state : port_loop_protection_forwarding
+
+**Type**: _boolean_
 
 Port loop protection is set based on the information provided by protocols. The
 asserting protocol setting the value of this key is defined in the
 port_loop_protection_blocked_reason key. Default value is `false`.
 
-### 10.16 forwarding_state : port_aggregation_forwarding key
+### 10.16 forwarding_state : port_aggregation_forwarding
+
+**Type**: _boolean_
 
 Port aggregation is set based on the information provided by protocols related
 to link aggregation. The asserting protocol setting the value of this key is
@@ -529,54 +729,72 @@ used to aggregate the state of the links members of the LAG.  For example, it is
 possible that all links on a LAG are blocked by a security protocol.  This is
 reflected in this key. Default value is `false`.
 
-## 11. Loop-protect Statistics group
+## 11. Loop-protect Statistics
 
-### 11.1 loop_protect_statistics column
+### 11.1 loop_protect_statistics
 
-### 11.2 loop_protect_statistics : loop_count key
+**Type**: _string->integer_
+
+### 11.2 loop_protect_statistics : loop_count
+
+**Type**: _integer_
 
 Number of times a loop has been detected on this port.
 
-## 12. Hardware Port Configuration group
+## 12. Hardware Port Configuration
 
 The following fields are not meant to be configured by the user, but rather by
 `portd` daemon that is responsible to consider user configuration and business
 logic in order to determine hardware configuration.
 
-### 12.1 hw_config column
+### 12.1 hw_config
+
+**Type**: _string->string_
 
 Key-value pairs that represent the configuration passed down to hardware.
 
-### 12.2 hw_config : enable key
+### 12.2 hw_config : enable
+
+**Type**: _boolean_
 
 The possible values are "true" and "false".
 
-### 12.3 hw_config : block_all_mstp key
+### 12.3 hw_config : block_all_mstp
+
+**Type**: _boolean_
 
 Indicates that the port should be blocked in all MSTP instances. Defaults to
 `false`.
 
-### 12.4 hw_config : internal-vlan key
+### 12.4 hw_config : internal-vlan
+
+**Type**: _string_
 
 The VLAN associated with l3 interfaces.
 
-## 13. MACs Validity group
+## 13. MACs Validity
 
-### 13.1 macs_invalid column
+### 13.1 macs_invalid
+
+**Type**: _boolean_
 
 If `true`, indicates that MACs on this port are invalid. This might be set by
 any agent of the system that decides that MACs are indeed invalid. Eventually
 those MACs will be cleared from the system and macs_invalid will revert to
 `false`.
 
-### 13.2 macs_invalid_on_vlans column
+### 13.2 macs_invalid_on_vlans
+
+**Type**: _uuid_ **refTable**: [VLAN](vlan.html) **refType**: _weak_
+
+
 
 If a set of VLANs is specified, it indicates that MACs on this port and that set
 of VLANs are invalid. This might be set by any agent of the system that decides
 that MACs are indeed invalid. Eventually those MACs will be cleared from the
 system and macs_invalid_on_vlans will revert to an empty set.
 
-## 14. Bonding Configuration group
+## 14. Bonding Configuration
 
 A port that has more than one interface is a ``bonded port.'' Bonding allows for
 load balancing and fail-over.
@@ -586,7 +804,9 @@ with successful LACP negotiation.
 
 These columns apply only to bonded ports.  Their values are otherwise ignored.
 
-### 14.1 bond_mode column
+### 14.1 bond_mode
+
+**Type**: _string_
 
 The type of bonding used for a bonded port. Bond mode controls the selection of
 a interface from a group of aggregate interfaces with which to transmit a frame.
@@ -594,13 +814,15 @@ This selection is performed with a hash function using either source and
 destination mac addresses (l2), ip addresses (l3) or tcp/udp ports (l4) as
 parameters. Defaults to `l3-src-dst-hash` if not assigned.
 
-### 14.2 LACP Configuration group
+### 14.2 LACP Configuration
 
 LACP, the Link Aggregation Control Protocol, is an IEEE standard that allows
 switches to automatically detect that they are connected by multiple links and
 aggregate across those links.  These settings control LACP behavior.
 
-#### 14.2.1 lacp column
+#### 14.2.1 lacp
+
+**Type**: _string_
 
 Configures LACP on this port.  LACP allows directly connected switches to
 negotiate which links may be bonded.  LACP may be enabled on non-bonded ports
@@ -611,23 +833,31 @@ to initiate such negotiations themselves.  If LACP is enabled on a port whose
 partner switch does not support LACP, the bond will be disabled. Defaults to
 `off` if unset.
 
-#### 14.2.2 other_config column
+#### 14.2.2 other_config
 
-#### 14.2.3 other_config : lacp-time key
+**Type**: _string->string_
+
+#### 14.2.3 other_config : lacp-time
+
+**Type**: _string_
 
 The LACP timing which should be used on this [Port](port.html). By default `slow` is
 used.  When configured to be `fast` LACP heartbeats are requested at a rate of
 once per second causing connectivity problems to be detected more quickly.  In
 `slow` mode, heartbeats are requested at a rate of once every 30 seconds.
 
-#### 14.2.4 other_config : lacp_fallback_mode key
+#### 14.2.4 other_config : lacp_fallback_mode
+
+**Type**: _string_
 
 Specifies the mode used when fallback is enabled.  Priority mode uses the LACP
 interface priority to decide which port remains forwarding when no partner is
 detected.  The all_active mode keeps all interfaces forwarding when no partner
 is detected. The default value is `priority`.
 
-#### 14.2.5 other_config : lacp_fallback_timeout key
+#### 14.2.5 other_config : lacp_fallback_timeout
+
+**Type**: _integer_
 
 Defines the time period during which fallback remains active.  The timer starts
 at the point when the interface state machine expires and configures the default
@@ -635,64 +865,86 @@ partner.  The unit is seconds. A value of 0 means that the timer doesn't run and
 fallback is active until it is disabled by the user or a partner is detected.
 The default value is `0`.
 
-#### 14.2.6 other_config : lacp-system-id key
+#### 14.2.6 other_config : lacp-system-id
+
+**Type**: _string_
 
 The LACP system ID of this [Port](port.html).  The system ID of a LACP bond is used
 to identify itself to its partners.  Must be a nonzero MAC address. Defaults to
 the bridge Ethernet address if unset.
 
-#### 14.2.7 other_config : lacp-system-priority key
+#### 14.2.7 other_config : lacp-system-priority
+
+**Type**: _integer_
 
 The LACP system priority of this [Port](port.html).  In LACP negotiations, link
 status decisions are made by the system with the numerically lower priority.
 
-#### 14.2.8 other_config : mclag_enabled key
+#### 14.2.8 other_config : mclag_enabled
+
+**Type**: _boolean_
 
 Determines whether this port is an MCLAG. Default is false.
 
-#### 14.2.9 other_config : lacp-fallback key
+#### 14.2.9 other_config : lacp-fallback
+
+**Type**: _boolean_
 
 Specifies if fallback should be used on this [Port](port.html). Set this value to
 `true` to enable the member interfaces based on the fallback mode and set to
 `false` to block all interfaces when LACP = off. If not specified, lacp-fallback
 is assumed to be false.
 
-## 15. Loop-protect per port Configuration group
+## 15. Loop-protect per port Configuration
 
-### 15.1 loop_protect_action column
+### 15.1 loop_protect_action
+
+**Type**: _string_
 
 This determines action for the Loop-protect feature.The value is set to "tx-
 port-disable" for disabling the sending port on detecting a loop, "tx-rx-
 disable" disables both sending and receiving ports when loop is detected and
 "do-not-disable" will not disable any port. Default value is `tx-port-disable`.
 
-### 15.2 loop_protect_enable column
+### 15.2 loop_protect_enable
+
+**Type**: _boolean_
 
 When set to `true`, Loop-protect is enabled on this port. Default value is
 `false`.
 
-## 16. Common Columns group
+## 16. Common Columns
 
 The overall purpose of these columns is described under `Common Columns` at the
 beginning of this document.
 
-### 16.1 external_ids column
+### 16.1 external_ids
 
-### 16.2 other_config column
+**Type**: _string->string_
 
-## 17. QoS Status group
+### 16.2 other_config
 
-### 17.1 qos_status column
+**Type**: _string->string_
 
-### 17.2 qos_status : schedule_profile key
+## 17. QoS Status
+
+### 17.1 qos_status
+
+**Type**: _string->string_
+
+### 17.2 qos_status : schedule_profile
+
+**Type**: _string_
 
 Contains the name of the schedule profile that is operating in hardware. This
-may different than the name in [qos](port.html#qos-column) when that profile cannot be
+may different than the name in [qos](port.html#qos) when that profile cannot be
 supported in hardware.
 
-### 17.3 qos_status : queue_profile key
+### 17.3 qos_status : queue_profile
+
+**Type**: _string_
 
 Contains the name of the queue profile that is operating in hardware. This may
-different than the name in [q_profile](port.html#q-profile-column) when that profile cannot
+different than the name in [q_profile](port.html#q-profile) when that profile cannot
 be supported in hardware.
 

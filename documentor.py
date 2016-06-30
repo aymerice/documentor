@@ -15,13 +15,12 @@
 #  under the License.
 
 
-import almost_base64
 import copy
 import json
-import re
-
 
 from collections import OrderedDict
+
+import almost_base64
 
 
 def get_type(obj):
@@ -38,7 +37,7 @@ def get_type(obj):
 def get_ref_table(obj):
     if isinstance(obj, dict) and 'key' in obj and \
        isinstance(obj['key'], dict) and 'refTable' in obj['key']:
-       return obj['key']['refTable']
+        return obj['key']['refTable']
     return 'unknown'
 
 
@@ -82,9 +81,9 @@ class DocSection:
         else:
             self.text = []
         if obj is not None and isinstance(obj, dict) and 'type' in obj:
-             self.sec_type = obj['type']
+            self.sec_type = obj['type']
         else:
-             self.sec_type = None
+            self.sec_type = None
         self.subsections = []
         self.link = link
 
@@ -106,7 +105,7 @@ class DocSection:
                  post[level] + '\n\n')
         fd.write(title)
         if self.link is not None:
-            fd.write('![%s_table_img](%s)\n\n' % (self.title,self.link))
+            fd.write('![%s_table_img](%s)\n\n' % (self.title, self.link))
         if self.sec_type is not None:
             ktype = get_type(self.sec_type)
             vtype = get_value_type(self.sec_type)
@@ -115,17 +114,16 @@ class DocSection:
                 sec_type = ktype + '->' + vtype
             else:
                 sec_type = ktype
+            for_str = ' **refTable**: [%s](%s.html) **refType**: _%s_\n\n'
             if ktype == 'uuid':
                 ref_table = get_ref_table(self.sec_type)
                 ref_type = get_ref_type(self.sec_type)
-                ref_str += (' **refTable**: [%s](%s.html) **refType**: _%s_\n\n' %
-                            (ref_table, ref_table.lower(), ref_type))
+                ref_str += for_str % (ref_table, ref_table.lower(), ref_type)
             if vtype == 'uuid':
                 value_type = get_value(self.sec_type)
                 ref_table = value_type['refTable']
                 ref_type = get_ref_type(value_type)
-                ref_str += (' **refTable**: [%s](%s.html) **refType**: _%s_\n\n' %
-                            (ref_table, ref_table.lower(), ref_type))
+                ref_str += for_str % (ref_table, ref_table.lower(), ref_type)
             fd.write('**Type**: _%s_%s\n\n' % (sec_type, ref_str))
         for line in self.text:
             fd.write(line + '\n')
@@ -136,7 +134,6 @@ class DocSection:
             section.to_file(fd, level + 1, ind, post)
             ind[-1] += 1
         del ind[-1]
-
 
     def fix_links(self):
         def clean(text):
@@ -194,8 +191,6 @@ class DocSection:
         del ind[-1]
 
 
-
-
 class DocGroup:
     def __init__(self, title='', obj=None):
         self.section = DocSection(title, obj)
@@ -247,9 +242,7 @@ class DocGroup:
         docgroup = self
         columns = table['columns']
         for column_name, column in columns.iteritems():
-            #if 'doc' in column:
             section = DocSection(column_name, column)
-            #section.sec_type = column['type']
             if 'group' in column:
                 group = column['group']
                 if isinstance(group, (str, unicode)):
@@ -259,7 +252,8 @@ class DocGroup:
                         docgroup.add_to_group(g, section, schema)
             else:
                 # Column does not belong to any group
-                docgroup.add_to_group('/' + table_name + '/Ungrouped', section, schema)
+                docgroup.add_to_group('/' + table_name + '/Ungrouped',
+                                      section, schema)
             col_type = column['type']
             if 'valueMap' in col_type:
                 for key_name, key in col_type['valueMap'].iteritems():
@@ -268,7 +262,8 @@ class DocGroup:
                     if 'group' in key:
                         docgroup.add_to_group(key['group'], section, schema)
                     else:
-                        docgroup.add_to_group('/' + table_name + '/Ungrouped', section, schema)
+                        docgroup.add_to_group('/' + table_name + '/Ungrouped',
+                                              section, schema)
 
     def from_schema(self, schema, path=[]):
         groups = schema['groups']
@@ -292,11 +287,6 @@ def save_tables(doc):
     index_file.write('Tables:\n\n')
     index_file.write('.. toctree::\n')
     index_file.write('   :maxdepth: 1\n\n')
-    post = {
-        1: ' table',
-        2: ' column',
-        3: ' key'
-    }
     for section in doc.subsections:
         name = section.title.lower()
         index_file.write('   ' + name + '\n')
@@ -338,7 +328,7 @@ class TableDiagram:
         self.name = name
 
     def __str__(self):
-        return "class %s\n" % self.name
+        return 'class %s\n' % self.name
 
     def __eq__(self, other):
         if isinstance(other, (str, unicode)):
@@ -354,8 +344,8 @@ class Diagram:
         self.name = ''
         self.root_tables = set()
         self.tables = set()
-        self.links = set() # Tuples of table names
-        self.weak_links = set() # Tuples of table names
+        self.links = set()  # Tuples of table names
+        self.weak_links = set()  # Tuples of table names
         if schema is not None:
             self.from_schema(schema)
 
@@ -382,11 +372,12 @@ class Diagram:
                 if isinstance(column['type'], dict) and \
                    isinstance(column['type']['key'], dict) and \
                    'refTable' in column['type']['key']:
-                   if 'refType' in column['type']['key'] and \
-                      column['type']['key']['refType'] == 'weak':
-                      self.add_link(table_name, column['type']['key']['refTable'], 'weak')
-                   else:
-                      self.add_link(table_name, column['type']['key']['refTable'])
+                    ref_table = column['type']['key']['refTable']
+                    if 'refType' in column['type']['key'] and \
+                       column['type']['key']['refType'] == 'weak':
+                        self.add_link(table_name, ref_table, 'weak')
+                    else:
+                        self.add_link(table_name, ref_table)
 
     def from_table(self, table_name, table):
         '''Builds a diagram from a table.'''
@@ -397,9 +388,9 @@ class Diagram:
             if isinstance(column['type'], dict) and \
                isinstance(column['type']['key'], dict) and \
                'refTable' in column['type']['key']:
-               other_table_name = column['type']['key']['refTable']
-               self.add_table(TableDiagram(other_table_name))
-               self.add_link(table_name, other_table_name)
+                other_table_name = column['type']['key']['refTable']
+                self.add_table(TableDiagram(other_table_name))
+                self.add_link(table_name, other_table_name)
 
     def focus_on(self, table_name):
         '''Return a Diagram that focus on the given table.
@@ -470,7 +461,7 @@ class Diagram:
                 pos, no_pos = no_pos, pos
                 link = ' <-%s- '
             if tb in self.root_tables:
-                  pos, no_pos = no_pos, pos
+                pos, no_pos = no_pos, pos
             if link_type == 'weak':
                 link = link.replace('-', '.')
             ret += ta + (link % pos) + tb + '\n'
@@ -506,7 +497,6 @@ def save_table_imgs(schema):
 
 
 def main():
-    #with open('myschema.json', 'r') as fp:
     with open('unified.extschema.json', 'r') as fp:
         schema = json.load(fp, object_pairs_hook=OrderedDict)
     diag = Diagram(schema)
@@ -520,146 +510,6 @@ def main():
     # img = almost_base64.deflate_and_encode(str(cdiag))
     # print 'http://www.plantuml.com/plantuml/img/' + img
 
-    #save_table_imgs(schema)
-
-    #diag = Diagram(schema)
-    #cdiag = diag.center_on('ACL')
-    #diag.from_table('QoS', schema['tables']['QoS'])
-    #print cdiag
-
-    # table = schema['tables']['Interface']
-    # group = DocGroup()
-    # group.from_table('Interface table', table, schema)
-    # doc = group.to_doc_section()
-    # doc.fix_links()
-    # with open('interface.md','w') as fp:
-    #     doc.to_file(fp)
-
-    # groups = get_groups(table)
-    # print groups
-    # print_groups(groups)
-
-    # mydoc = DocSection(title='My Doc')
-    # groups = {}
-    # groups['1'] = mydoc
-    # topdoc = DocSection(title='Top Section')
-    # topdoc.add(mydoc)
-    # topdoc.printme()
-    # groups['1'].title = 'Change Title'
-    # topdoc.printme()
-
-
 
 if __name__ == '__main__':
     main()
-
-
-    # def print_groups(groups, space=0):
-    #     pre = ' ' * space * 2 + unichr(746)
-    #     for group in groups:
-    #         print pre + group
-    #         print_groups(groups[group], space + 1)
-
-# def get_groups(table):
-#     columns = table['columns']
-#     groups = OrderedDict()
-#     for column_name, column in columns.iteritems():
-#         col_type = column['type']
-#         if isintance(col_type, dict) and 'valueMap' in col_type:
-#             grouped_keys = OrderedDict()
-#             for key_name, key in col_type['valueMap']:
-#                 if 'group' in key:
-#                     if key['group'] not in grouped_key:
-#                         grouped_cols[key['group']] = []
-#                     grouped_cols[key['group']].append(key)
-#
-#         else:
-#             if 'group' in column:
-#                 if isinstance(column['group'], list):
-#                     for group in column['group']:
-#                         add_to_groups(groups, group)
-#                 else:
-#                     add_to_groups(groups, column['group'])
-#     return groups
-
-# class DocGroup:
-#     def __init__(self, title='', obj=None, schema=None):
-#         self.subgroups = OrderedDict()
-#         self.subsections = []
-#         self.doc = DocSection(title, obj)
-#         self.schema = schema
-#
-#     def _add_to_subgroups(self, group, title, obj):
-#         paths = group.split('/')
-#         paths = paths[2:]
-#         cur_group = self
-#         for path in paths:
-#             if path not in cur_group.subgroups:
-#                 cur_group.subgroups[path] = DocGroup(title=path + ' group')
-#             cur_group = cur_group.subgroups[path]
-#         cur_group.subsections.append(DocSection(title, obj))
-#
-#     def add(self, title, obj):
-#         if isinstance(obj, dict) and 'group' in obj:
-#             if isinstance(obj['group'], list):
-#                 for group in obj['group']:
-#                     self._add_to_subgroups(group, title, obj)
-#             else:
-#                 self._add_to_subgroups(obj['group'], title, obj)
-#
-#     def to_doc_section(self):
-#         doc = DocSection()
-#         doc.title =  self.doc.title
-#         doc.text =  self.doc.text
-#         for section in self.subsections:
-#             doc.add(section)
-#         for group in self.subgroups.values():
-#             doc.add(group.to_doc_section())
-#         return doc
-#
-#     def from_table(self, table):
-#         columns = table['columns']
-#         for column_name, column in columns.iteritems():
-#             self.add(column_name, column)
-
-# class DocKey:
-#     def __init__(self, key_name='', key=None):
-#         self.name = key_name
-#         if key:
-#             self.doc = key['doc']
-#         else:
-#             self.doc = []
-#
-#
-# class DocGroups():
-#     def __init__(self, group_name, schema):
-#         self.name = group_name
-#         self.doc = []
-#         self.groups = OrderedDict()
-#         groups = schema['groups']
-#         if groups:
-#             if group_name in groups:
-#                 self.doc = groups[group_name]['doc']
-#
-#
-#     def add(self, name, obj):
-#         if isinstance(name, (str, unicode)):
-#             self.groups[name] = obj
-#         elif isinstance(name, list):
-#             for n in name:
-#                 self.add
-#         if 'group' in obj:
-#             self.groups[obj[group]] = obj
-#
-#
-# class DocColumn(DocKey):
-#     def __init__(self, column_name='', column=None):
-#         DocKey.__init__(self, column_name, column)
-#         self.key_groups = DocGroups()
-#
-#     def add_key(self, key_name, key):
-#         doc_key = DocKey(key_name, key)
-#         if 'group' in key:
-#             self.key_groups.add(key['group'], doc_key)
-#         else:
-#             self.key_groups

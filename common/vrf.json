@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "tables/vrf.json#",
+  "name": "OpenSwitch",
+  "version": "0.1.8",
+  "tables": {
+    "VRF": {
+      "columns": {
+        "name": {
+          "category": "configuration",
+          "type": {
+            "key": {
+              "type": "string",
+              "maxLength": 32
+            }
+          },
+          "mutable": false,
+          "doc": [
+            "VRF identifier. Should be alphanumeric. VRF names must be unique."
+          ],
+          "group": "/VRF/Configuration"
+        },
+        "table_id": {
+          "category": "status",
+          "type": {
+            "key": {
+              "type": "integer",
+              "minInteger": 0,
+              "maxInteger": 65535
+            },
+            "min": 0,
+            "max": 1
+          },
+          "doc": [
+            "Kernel table_id assigned for routing table of this VRF."
+          ],
+          "group": "/VRF/Configuration"
+        },
+        "ports": {
+          "category": "configuration",
+          "relationship": "reference",
+          "type": {
+            "key": {
+              "type": "uuid",
+              "refTable": "Port"
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "doc": [
+            "Ports included in the VRF."
+          ],
+          "group": "/VRF/Configuration"
+        },
+        "bgp_routers": {
+          "category": "configuration",
+          "relationship": "1:m",
+          "type": {
+            "key": {
+              "type": "integer",
+              "minInteger": 1,
+              "maxInteger": 4294967295
+            },
+            "value": {
+              "type": "uuid",
+              "refTable": "BGP_Router"
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "keyname": "asn",
+          "doc": [
+            "BGP routers keyed by ASN value."
+          ],
+          "group": "/VRF/Configuration"
+        },
+        "ospf_routers": {
+          "category": "configuration",
+          "relationship": "1:m",
+          "type": {
+            "key": {
+              "type": "integer",
+              "minInteger": 1,
+              "maxInteger": 65535
+            },
+            "value": {
+              "type": "uuid",
+              "refTable": "OSPF_Router"
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "keyname": "instance_tag",
+          "doc": [
+            "The list of all the OSPFv2 Router instances."
+          ],
+          "group": "/VRF/Configuration"
+        },
+        "dhcp_server": {
+          "category": "configuration",
+          "relationship": "1:m",
+          "type": {
+            "key": {
+              "type": "uuid",
+              "refTable": "DHCP_Server"
+            },
+            "min": 0,
+            "max": 1
+          },
+          "doc": [
+            "DHCP Server in the VRF."
+          ],
+          "group": "/VRF/Configuration"
+        },
+        "active_router_id": {
+          "category": "status",
+          "type": {
+            "key": {
+              "type": "string",
+              "maxLength": 45
+            },
+            "min": 0,
+            "max": 1
+          },
+          "doc": [
+            "Router-ID (in IPv4 format) that is currently used in the system, unless",
+            "overridden by protocol specific one."
+          ],
+          "group": "/VRF/Configuration"
+        },
+        "status": {
+          "category": "status",
+          "type": {
+            "valueType": "string",
+            "valueMap": {
+              "namespace_ready": {
+                "type": "boolean",
+                "doc": [
+                  "Indicates whether Linux namespace exists for this VRF. If not set, the assumed",
+                  "value is false."
+                ],
+                "group": "/VRF/Status",
+                "emptyValue": "false"
+              }
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "ephemeral": true,
+          "group": "/VRF/Status"
+        },
+        "other_config": {
+          "category": "configuration",
+          "type": {
+            "key": "string",
+            "value": "string",
+            "min": 0,
+            "max": "unlimited"
+          },
+          "group": "/VRF/Common Columns"
+        },
+        "external_ids": {
+          "category": "configuration",
+          "type": {
+            "key": "string",
+            "value": "string",
+            "min": 0,
+            "max": "unlimited"
+          },
+          "group": "/VRF/Common Columns"
+        }
+      },
+      "indexes": [
+        [
+          "name"
+        ]
+      ],
+      "title": "Virtual Routing and Forwarding",
+      "doc": [
+        "Each entry in this table represents a single routing domain, commonly known as",
+        "Virtual Routing and Forwarding."
+      ]
+    }
+  }
+}

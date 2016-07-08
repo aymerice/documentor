@@ -1,0 +1,271 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "tables/bridge.json#",
+  "name": "OpenSwitch",
+  "version": "0.1.8",
+  "tables": {
+    "Bridge": {
+      "columns": {
+        "name": {
+          "category": "configuration",
+          "type": "string",
+          "mutable": false,
+          "doc": [
+            "Bridge identifier.  Should be alphanumeric and no more than about 8 bytes long.",
+            "Must be unique among the names of ports, interfaces, and bridges on a host."
+          ],
+          "group": "/Bridge/Core Features"
+        },
+        "ports": {
+          "category": "configuration",
+          "relationship": "reference",
+          "type": {
+            "key": {
+              "type": "uuid",
+              "refTable": "Port"
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "doc": [
+            "Ports included in the bridge."
+          ],
+          "group": "/Bridge/Core Features"
+        },
+        "vlans": {
+          "category": "configuration",
+          "relationship": "1:m",
+          "type": {
+            "key": {
+              "type": "uuid",
+              "refTable": "VLAN"
+            },
+            "min": 0,
+            "max": 4094
+          },
+          "doc": [
+            "VLANs included in the bridge."
+          ],
+          "group": "/Bridge/Core Features"
+        },
+        "mstp_instances": {
+          "category": "configuration",
+          "relationship": "1:m",
+          "type": {
+            "key": {
+              "type": "integer",
+              "minInteger": 1,
+              "maxInteger": 64
+            },
+            "value": {
+              "type": "uuid",
+              "refTable": "MSTP_Instance"
+            },
+            "min": 0,
+            "max": 64
+          },
+          "doc": [
+            "MSTP configuration for individual instance."
+          ],
+          "group": "/Bridge/Core Features"
+        },
+        "mstp_common_instance": {
+          "category": "configuration",
+          "relationship": "1:m",
+          "type": {
+            "key": {
+              "type": "uuid",
+              "refTable": "MSTP_Common_Instance"
+            },
+            "min": 0,
+            "max": 1
+          },
+          "doc": [
+            "MSTP configuration for CIST(Common Instance Spanning Tree)."
+          ],
+          "group": "/Bridge/Core Features"
+        },
+        "mstp_enable": {
+          "category": "configuration",
+          "type": {
+            "key": {
+              "type": "boolean"
+            },
+            "min": 0,
+            "max": 1
+          },
+          "doc": [
+            "Set this value to `true`, to enable MSTP. Default value is `false`."
+          ],
+          "group": "/Bridge/MSTP Configurations"
+        },
+        "mirrors": {
+          "category": "configuration",
+          "relationship": "1:m",
+          "type": {
+            "key": {
+              "type": "uuid",
+              "refTable": "Mirror"
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "doc": [
+            "[Mirror](Mirror) references for sessions configured in this bridge."
+          ],
+          "group": "/Bridge/Other Features"
+        },
+        "datapath_type": {
+          "category": "configuration",
+          "type": "string",
+          "doc": [
+            "Name of datapath provider."
+          ],
+          "group": "/Bridge/Other Features"
+        },
+        "datapath_version": {
+          "category": "status",
+          "type": "string",
+          "group": "/Bridge/Other Features"
+        },
+        "datapath_id": {
+          "category": "status",
+          "type": {
+            "key": "string",
+            "min": 0,
+            "max": 1
+          },
+          "ephemeral": true,
+          "group": "/Bridge/Other Features"
+        },
+        "status": {
+          "category": "status",
+          "type": {
+            "valueType": "string",
+            "valueMap": {
+              "mstp_config_digest": {
+                "type": "string",
+                "doc": [
+                  "The configuration digest for the MSTP bridge that is derived based on the VLAN",
+                  "membership of MST instances."
+                ],
+                "group": "/Bridge/MSTP Status"
+              },
+              "actual-mac-table-size": {
+                "type": "string",
+                "doc": [
+                  "Actual size of the mac table. If mac-table-size exceeds hardware capability,",
+                  "then this field will show the real size used."
+                ],
+                "group": "/Bridge/Bridge Status"
+              }
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "ephemeral": true,
+          "doc": [
+            "Key-value pairs that report bridge status."
+          ],
+          "group": [
+            "/Bridge/MSTP Status",
+            "/Bridge/Bridge Status"
+          ]
+        },
+        "other_config": {
+          "category": "configuration",
+          "type": {
+            "valueType": "string",
+            "valueMap": {
+              "hwaddr": {
+                "type": "string",
+                "doc": [
+                  "An Ethernet address in the form _xx_:_xx_:_xx_:_xx_:_xx_:_xx_ to set the",
+                  "hardware address of the local port and influence the datapath ID."
+                ],
+                "group": "/Bridge/Other Features"
+              },
+              "mstp_config_name": {
+                "type": "string",
+                "doc": [
+                  "Set this value to specify the MSTP configuration name. Default value is system",
+                  "MAC address."
+                ],
+                "group": "/Bridge/MSTP Configurations"
+              },
+              "mstp_config_revision": {
+                "type": "string",
+                "doc": [
+                  "Set this value to specify the configuration revision number. Default value is 0."
+                ],
+                "group": "/Bridge/MSTP Configurations"
+              },
+              "mac-table-size": {
+                "type": {
+                  "type": "integer",
+                  "minInteger": 1
+                },
+                "doc": [
+                  "The maximum number of MAC addresses to learn.  The default is currently 16K.",
+                  "The value, if specified, is forced into a reasonable range, currently 10 to",
+                  "256K."
+                ],
+                "group": "/Bridge/Other Features"
+              },
+              "mac-aging-time": {
+                "type": {
+                  "type": "integer",
+                  "minInteger": 1
+                },
+                "doc": [
+                  "The maximum number of seconds to retain a MAC learning entry for which no",
+                  "packets have been seen.  The default is currently 300 seconds (5 minutes).  The",
+                  "value, if specified, is forced into a reasonable range, currently 15 to 3600",
+                  "seconds.",
+                  "",
+                  "A short MAC aging time allows a network to more quickly detect that a host is no",
+                  "longer connected to a switch port.  However, it also makes it more likely that",
+                  "packets will be flooded unnecessarily, when they are addressed to a connected",
+                  "host that rarely transmits packets.  To reduce the incidence of unnecessary",
+                  "flooding, use a MAC aging time longer than the maximum interval at which a host",
+                  "will ordinarily transmit packets."
+                ],
+                "group": "/Bridge/Other Features"
+              }
+            },
+            "min": 0,
+            "max": "unlimited"
+          },
+          "group": [
+            "/Bridge/MSTP Configurations",
+            "/Bridge/Other Features",
+            "/Bridge/Common Columns"
+          ]
+        },
+        "external_ids": {
+          "category": "configuration",
+          "type": {
+            "key": "string",
+            "value": "string",
+            "min": 0,
+            "max": "unlimited"
+          },
+          "group": "/Bridge/Common Columns"
+        }
+      },
+      "indexes": [
+        [
+          "name"
+        ]
+      ],
+      "doc": [
+        "Configuration for a bridge within an [System](System).",
+        "",
+        "A [Bridge](Bridge) record represents an Ethernet switch with one or more",
+        "``ports,'' which are the [Port](Port) records pointed to by the",
+        "[Bridge](Bridge)'s [ports](Bridge.ports) column. In the first release, only one",
+        "default bridge (bridge_normal) is supported"
+      ]
+    }
+  }
+}
